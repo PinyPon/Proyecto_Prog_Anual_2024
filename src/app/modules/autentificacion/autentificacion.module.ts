@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-//Rutas hijas
+// ARCHIVO DE RUTAS HIJAS
 import { AutentificacionRoutingModule } from './autentificacion-routing.module';
 
-//Componentes de la autentificación
+// VISTAS DE AUTENTIFICACIÓN
 import { RegistroComponent } from './pages/registro/registro.component';
 import { IniciosesionComponent } from './pages/iniciosesion/iniciosesion.component';
 
@@ -26,7 +26,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     AutentificacionRoutingModule,
-    //Angular Material
+    // MATERIAL
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,

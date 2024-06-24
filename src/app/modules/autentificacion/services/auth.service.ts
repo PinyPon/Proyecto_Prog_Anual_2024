@@ -33,7 +33,8 @@ export class AuthService {
     const user = await this.auth.currentUser;
 
     /*
-      Si el usuario no respeta la estructura o si hay problemas con el registro -> ej.: mal internet
+      Si el usuario no respeta la estructura de la interfaz /
+      Si tuvo problemas para el registro -> ej.: mal internet
     */
     if(user == null){
       return null;
