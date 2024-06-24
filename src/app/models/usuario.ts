@@ -1,4 +1,4 @@
-export interface Admin {
+export interface Usuario {
     uid: string | any;//any es indefinido o lo que sea
     nombre: string;
     apellido: string;
