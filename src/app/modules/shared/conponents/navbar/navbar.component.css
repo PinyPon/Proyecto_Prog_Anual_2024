@@ -1,0 +1,8 @@
+.example-spacer {
+    flex: 1 1 auto;
+}  
+
+.botones{
+    display: flex;
+    justify-content: right;
+}

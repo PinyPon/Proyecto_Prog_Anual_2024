@@ -50,7 +50,8 @@ export class RegistroComponent {
       alert("¡Se pudo registrar con éxito! :)");
 
       // el método NAVIGATE nos redirecciona a otra vista
-      this.servicioRutas.navigate(['/inicio']);
+      
+      this.servicioRutas.navigate(['/inicio-sesion'])
     })
     //captura la falla y la convierte en un error
     .catch(error => {
@@ -88,7 +89,8 @@ export class RegistroComponent {
       apellido: this.usuarios.apellido = '',
       email: this.usuarios.email = '',
       rol: this.usuarios.rol = '',
-      password: this.usuarios.password = ''
+      password: this.usuarios.password = '',
+      permisos: this.usuarios.permisos= false
     }
   }
 }
