@@ -16,17 +16,17 @@ export class CardComponent {
       {
         id: "",
         nombre: "",
-        description: "Ramo",
+        description: "Mixto",
         precio: 5,
-        imagen: "src/assets/ramo1.jfif",
-        alt: ""
+        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",     
+        alt: "https://i.pinimg.com/236x/76/81/a9/7681a926a2e45278194d3c55f91e0632.jpg"
        },
        {
         id: "",
         nombre: "",
         description: "Ramo",
         precio: 5,
-        imagen: "src/assets/ramo2.jfif",
+        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
         alt: ""
        },
        {
@@ -34,7 +34,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo",
         precio: 500,
-        imagen: "src/assets/ramo3.jfif",
+        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
         alt: ""
        },
        {
@@ -42,7 +42,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo",
         precio: 5000,
-        imagen: "src/assets/ramo4.jfif",
+        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
         alt: ""
        },
        {
@@ -50,7 +50,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo",
         precio: 5000,
-        imagen: "src/assets/ramo5.jfif",
+        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
         alt: ""
        },
        {
@@ -58,39 +58,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo",
         precio: 5000,
-        imagen: "src/assets/ramo6.jfif",
-        alt: ""
-       },
-       {
-        id: "",
-        nombre: "",
-        description: "Ramo",
-        precio: 5000,
-        imagen: "src/assets/ramo7.jfif",
-        alt: ""
-       },
-       {
-        id: "",
-        nombre: "",
-        description: "Ramo",
-        precio: 5000,
-        imagen: "src/assets/ramo8.jfif",
-        alt: ""
-       },
-       {
-        id: "",
-        nombre: "",
-        description: "Ramo",
-        precio: 5000,
-        imagen: "src/assets/ramo5.jfif",
-        alt: ""
-       },
-       {
-        id: "",
-        nombre: "",
-        description: "Ramo",
-        precio: 5000,
-        imagen: "src/assets/ramo10.jfif",
+        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
         alt: ""
        }
      ]

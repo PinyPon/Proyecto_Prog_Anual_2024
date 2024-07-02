@@ -1,0 +1,14 @@
+#footer{
+    background-color: orchid;
+    width: 100%;
+}
+footer {
+    background-color: orchid;
+    margin-top: 0px;
+    width: 100%;
+    justify-content: end;
+    margin-bottom: 0px;
+}
+
+
+

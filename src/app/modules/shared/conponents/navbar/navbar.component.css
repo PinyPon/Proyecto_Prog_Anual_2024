@@ -1,8 +1,43 @@
 .example-spacer {
-    flex: 1 1 auto;
-}  
+  flex: 1 1 auto;
+}
 
-.botones{
-    display: flex;
-    justify-content: right;
+.botones {
+  display: flex;
+  justify-content: right;
+}
+
+/*Corresponde a pantallas mas chicas*/
+@media (min-width: 300px) and (max-width: 700px) {
+  mat-toolbar {
+    background: #FBD3E9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  #menuInicio {
+    display: none;
+  }
+  
+  
+  #menuProducto {
+    display: none;
+  }
+
+}
+
+/*Corresponde a pantallas más grandes*/
+@media (min-width: 700px) {
+  mat-toolbar {
+    background: #f2709c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff9472, #f2709c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ff9472, #f2709c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+
+  #menuSelecciones {
+    display: none;
+  }
+
 }

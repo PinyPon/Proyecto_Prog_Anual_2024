@@ -9,6 +9,7 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 //Componentes
 import { CardComponent } from './componentes/card/card.component';
 import { CarrouselComponent } from './componentes/carrousel/carrousel.component';
+//import { FooterComponent } from '../shared/conponents/footer/footer.component';
 
 // COMPONENTES DE MATERIAL
 import {MatButtonModule} from '@angular/material/button';
@@ -18,7 +19,8 @@ import {MatCardModule} from '@angular/material/card';
   declarations: [
     InicioComponent,
     CardComponent,
-    CarrouselComponent
+    CarrouselComponent,
+  // FooterComponent
   ],
   imports: [
     CommonModule,

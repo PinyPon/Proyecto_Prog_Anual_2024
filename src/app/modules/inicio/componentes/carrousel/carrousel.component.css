@@ -1,0 +1,11 @@
+/* Media query para pantallas de hasta 700px */
+@media (max-width: 700px) {
+    .carousel-caption {
+      display: none; /* Ocultar captions en pantallas pequeñas */
+    }
+    .carousel-item img {
+      height: 300px; /* Ajustar altura de las imágenes */
+      object-fit: cover; /* Ajustar el tamaño de la imagen */
+    }
+  }
+  

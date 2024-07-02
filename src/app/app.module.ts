@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 // Importamos los componentes que se utilizran en toda la pagina, y se llaman "componentes globales"
 import { SharedModule } from './modules/shared/shared.module';
 

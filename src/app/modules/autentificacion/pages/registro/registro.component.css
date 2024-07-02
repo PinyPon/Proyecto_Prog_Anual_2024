@@ -1,22 +1,38 @@
-.container{
-    margin-left: 21%;
-    justify-content: center;
-    align-items: center;
-}
-
-
 .boton{
     display: flex;
-    justify-content: center;
-    width: 35%;
-    margin: auto;
-    text-align: center;
-}
-
-.inputs{
-    width: 40%;
-    display: flex;
+    margin-left: 28%;
     justify-content: center;
     align-items: center;
+    width: 40%;
+}
 
+/* Ajustes para pantallas medianas y grandes */
+@media (min-width: 768px) {
+    .container {
+        max-width: 800px; /* Ancho máximo del contenedor */
+        margin: auto; /* Centrar el contenedor */
+    }
+
+    .mat-form-field {
+        width: 100%; /* Asegurar que los campos de formulario ocupen todo el ancho */
+    }
+
+    .btn-primary {
+        width: 100%; /* Botón de registro ocupa todo el ancho disponible */
+        max-width: 200px; /* Ancho máximo del botón */
+        margin-top: 10px; /* Espacio superior */
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 767px) {
+    .mat-form-field {
+        width: 100%; /* Asegurar que los campos de formulario ocupen todo el ancho */
+    }
+
+    .btn-primary {
+        width: 100%; /* Botón de registro ocupa todo el ancho disponible */
+        max-width: 200px; /* Ancho máximo del botón */
+        margin-top: 10px; /* Espacio superior */
+    }
 }

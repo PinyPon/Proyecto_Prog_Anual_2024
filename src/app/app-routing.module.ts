@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CarrouselComponent } from './modules/inicio/componentes/carrousel/carrousel.component';
 import { InicioComponent } from './modules/inicio/pages/inicio/inicio.component';
+
 
 const routes: Routes = [
   // RUTA INICIAL / PRINCIPAL AL COMPONENTE
@@ -23,4 +25,8 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  export={
+    CarrouselComponent
+  }
+ }
