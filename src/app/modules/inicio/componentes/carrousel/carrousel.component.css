@@ -1,5 +1,5 @@
 /* Media query para pantallas de hasta 700px */
-@media (max-width: 700px) {
+@media (max-width: 300px) {
     .carousel-caption {
       display: none; /* Ocultar captions en pantallas pequeñas */
     }

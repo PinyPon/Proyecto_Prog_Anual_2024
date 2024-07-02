@@ -1,14 +1,16 @@
 #footer{
-    background-color: orchid;
+    background-color: #c4c4c4;
     width: 100%;
 }
 footer {
-    background-color: orchid;
+    background-color: #c4c4c4;
     margin-top: 0px;
     width: 100%;
     justify-content: end;
     margin-bottom: 0px;
 }
 
-
+a{
+    color: bisque;
+}
 
