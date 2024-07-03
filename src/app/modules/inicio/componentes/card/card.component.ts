@@ -16,7 +16,7 @@ export class CardComponent {
       {
         id: "",
         nombre: "",
-        description: "Mixto",
+        description: "Ramo de flores",
         precio: 5,
         imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",     
         alt: "https://i.pinimg.com/236x/76/81/a9/7681a926a2e45278194d3c55f91e0632.jpg"
@@ -24,7 +24,7 @@ export class CardComponent {
        {
         id: "",
         nombre: "",
-        description: "Ramo",
+        description: "Ramo de flores",
         precio: 5,
         imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
         alt: ""
@@ -32,7 +32,7 @@ export class CardComponent {
        {
         id: "",
         nombre: "",
-        description: "Ramo",
+        description: "Ramo de flores",
         precio: 500,
         imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
         alt: ""
@@ -40,7 +40,7 @@ export class CardComponent {
        {
         id: "",
         nombre: "",
-        description: "Ramo",
+        description: "Ramo de flores",
         precio: 5000,
         imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
         alt: ""
@@ -48,7 +48,7 @@ export class CardComponent {
        {
         id: "",
         nombre: "",
-        description: "Ramo",
+        description: "Ramo de flores",
         precio: 5000,
         imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
         alt: ""
@@ -56,7 +56,39 @@ export class CardComponent {
        {
         id: "",
         nombre: "",
-        description: "Ramo",
+        description: "Ramo de flores",
+        precio: 5000,
+        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
+        alt: ""
+       },
+       {
+        id: "",
+        nombre: "",
+        description: "Ramo de flores",
+        precio: 5000,
+        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
+        alt: ""
+       },
+       {
+        id: "",
+        nombre: "",
+        description: "Ramo de flores",
+        precio: 5000,
+        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
+        alt: ""
+       },
+       {
+        id: "",
+        nombre: "",
+        description: "Ramo de flores",
+        precio: 5000,
+        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
+        alt: ""
+       },
+       {
+        id: "",
+        nombre: "",
+        description: "Ramo de flores",
         precio: 5000,
         imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
         alt: ""

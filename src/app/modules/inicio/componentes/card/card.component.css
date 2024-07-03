@@ -1,4 +1,6 @@
-
+.example-card{
+    background-color: rgb(217, 224, 235);
+}
 
 h1{
     text-align: center;
@@ -14,4 +16,5 @@ h1{
 
 p{
     padding: 5px;
+    font-family: 'Times New Roman', Times, serif ;
 }
