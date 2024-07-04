@@ -1,33 +1,42 @@
 <mat-toolbar>
-  <button id="menuSelecciones" mat-icon-button class="example-icon"[matMenuTriggerFor]="seccion"> 
-    <mat-icon>menu</mat-icon>
-  </button>
-<!-- Menú desplegable para pantallas pequeñas -->
-  <mat-menu #seccion="matMenu">
-    <button mat-menu-item routerLink="/inicio">Inicio</button>
-    <button mat-menu-item routerLink="/producto">General</button>
-  </mat-menu>
-  <span></span>
-  <!--boton inicio-->
-  <button id="menuInicio" mat-button routerLink="/inicio">Inicio</button>
-  
-  <!--Productos-->
-  <button id="menuProducto" mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="/">Ramos medianos</button>
-        <button mat-menu-item routerLink="/">Ramos Casamiento</button>
-        <button mat-menu-item routerLink="/">Flores solas</button>
-    </mat-menu>
 
-    <span class="example-spacer"></span>
-
-    <!-- Inicio sesión y registro de un nuevo usuario -->
-<div class="botones">
-        <button mat-menu-item routerLink="/registro">Registrarse</button>
-        <button mat-menu-item routerLink="/inicio-sesion">Iniciar Sesión</button>
-</div>
-    <!-- Carrito
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
+    
+    <button id="menuSelecciones" mat-icon-button class="example-icon"[matMenuTriggerFor]="seccion"> 
+      <mat-icon>menu</mat-icon>
     </button>
-</mat-toolbar> -->
+  <!-- Menú desplegable para pantallas pequeñas -->
+    <mat-menu #seccion="matMenu">
+      <button mat-menu-item routerLink="/inicio">Inicio</button>
+  
+  
+      
+      <button mat-menu-item routerLink="/producto">General</button>
+    </mat-menu>
+    <span></span>
+    <!--boton inicio-->
+    <button id="menuInicio" mat-button routerLink="/inicio">Inicio</button>
+    
+    <!--Productos-->
+    <button id="menuProducto" mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+          <button mat-menu-item routerLink="/">Ramos medianos</button>
+          <button mat-menu-item routerLink="/">Ramos Casamiento</button>
+          <button mat-menu-item routerLink="/">Flores solas</button>
+      </mat-menu>
+  
+      <span class="example-spacer"></span>
+  
+      <!-- Inicio sesión y registro de un nuevo usuario -->
+  <div class="botones">
+   
+          <button mat-menu-item routerLink="/registro">Registrarse</button>
+          <button mat-menu-item routerLink="/inicio-sesion">Iniciar Sesión</button>
+  </div>
+      <!-- Carrito
+      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+  </mat-toolbar> -->
+
+
+ 
