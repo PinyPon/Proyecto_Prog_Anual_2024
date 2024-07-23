@@ -39,6 +39,8 @@ export class IniciosesionComponent {
       password: this.usuarios.password
     }
 
+    
+
     const res = await this.servicioAuth.iniciarSesion(credenciales.email, credenciales.password)
     .then(res => {
       alert('¡Se pudo ingresar con éxito :)!');

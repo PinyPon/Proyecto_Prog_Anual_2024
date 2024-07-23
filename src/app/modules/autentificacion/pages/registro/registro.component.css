@@ -1,15 +1,31 @@
+body{
+    background: -webkit-linear-gradient(to top, #f7e6fc, #572f63);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f7e6fc, #572f63); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
 .boton{
     display: flex;
-    margin-left: 28%;
     justify-content: center;
     align-items: center;
     width: 40%;
+}
+.form{
+    padding: 10%;
+    marker: none;
+}
+.lista{
+    display: flex;
+    justify-content: center;
+
+}
+.contenedor{
+    padding-bottom: 10%;
 }
 
 /* Ajustes para pantallas medianas y grandes */
 @media (min-width: 768px) {
     .container {
-        max-width: 800px; /* Ancho máximo del contenedor */
         margin: auto; /* Centrar el contenedor */
     }
 
@@ -25,7 +41,7 @@
 }
 
 /* Ajustes para pantallas pequeñas */
-@media (max-width: 767px) {
+@media (min-width:300px) and (max-width: 767px) {
     .mat-form-field {
         width: 100%; /* Asegurar que los campos de formulario ocupen todo el ancho */
     }
@@ -33,6 +49,5 @@
     .btn-primary {
         width: 100%; /* Botón de registro ocupa todo el ancho disponible */
         max-width: 200px; /* Ancho máximo del botón */
-        margin-top: 10px; /* Espacio superior */
     }
 }
