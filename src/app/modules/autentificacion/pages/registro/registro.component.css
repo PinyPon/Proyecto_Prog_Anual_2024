@@ -12,7 +12,6 @@ body{
 }
 .form{
     padding: 10%;
-    marker: none;
 }
 .lista{
     display: flex;
