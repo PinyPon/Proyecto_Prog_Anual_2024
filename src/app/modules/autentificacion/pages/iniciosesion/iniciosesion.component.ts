@@ -17,7 +17,7 @@ export class IniciosesionComponent {
     public servicioAuth: AuthService,
     public servicioFirestore: FirestoreService,
     public servicioRutas: Router
-  ){}
+  ) { }
 
   // Definimos la interfaz de usuario
   usuarios: Usuario = {
@@ -31,28 +31,53 @@ export class IniciosesionComponent {
   }
 
   // Función para iniciar sesión
-  async iniciarSesion(){
- 
+  async iniciarSesion() {
+
 
     const credenciales = {
       email: this.usuarios.email,
       password: this.usuarios.password
     }
 
-    
+    try {
+      const usuarioBD = await this.servicioAuth.obtenerUsuario(credenciales.email);
 
-    const res = await this.servicioAuth.iniciarSesion(credenciales.email, credenciales.password)
-    .then(res => {
-      alert('¡Se pudo ingresar con éxito :)!');
+      if ( !usuarioBD || usuarioBD.empty ) {
+        alert("Correo electronico no registrado");
+        this.limpiarInputs();
+        return;
+      }
 
-      this.servicioRutas.navigate(['/inicio']);
-    })
-    .catch(err => {
-      alert('Hubo un problema al iniciar sesión :( '+ err);
 
-      this.limpiarInputs();
-    })
+      const usuarioDoc = usuarioBD.docs[0];
+
+      const usuarioData = usuarioDoc.data() as Usuario;
+
+      const hasherPassword = CryptoJS.SHA256(credenciales.password).toString();
+
+      if (hasherPassword !== usuarioData.password) {
+        alert("Contraseña incorrecta");
+  
+        this.usuarios.password = "";
+        return;
+      }
+
+      const res = await this.servicioAuth.iniciarSesion(credenciales.email, credenciales.password)
+      .then(res => {
+        alert('¡Se pudo ingresar con éxito :)!');
+
+        this.servicioRutas.navigate(['/inicio']);
+      })
+      .catch(err => {
+        alert('Hubo un problema al iniciar sesión :( ' + err);
+
+        this.limpiarInputs();
+      })
+    }catch (error){
+      error;
+    }
   }
+
 
   limpiarInputs(){
     const inputs = {
@@ -61,4 +86,3 @@ export class IniciosesionComponent {
     }
   }
 }
-
