@@ -33,7 +33,6 @@ export class IniciosesionComponent {
   // Función para iniciar sesión
   async iniciarSesion() {
 
-
     const credenciales = {
       email: this.usuarios.email,
       password: this.usuarios.password

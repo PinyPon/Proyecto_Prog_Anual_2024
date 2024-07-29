@@ -6,8 +6,8 @@ import { AuthService } from '../../services/auth.service';
 import { FirestoreService } from 'src/app/modules/shared/services/firestore.service';
 // importamos componente de rutas de angular
 import { Router } from '@angular/router';
-
-import * as CryptoJS from 'crypto-js'
+// componente de encriptación
+import * as CryptoJS from 'crypto-js';
 
 @Component({
   selector: 'app-registro',
@@ -15,12 +15,12 @@ import * as CryptoJS from 'crypto-js'
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent {
-  //ojo de la contrasela
+  //ojo de la contraseña
   hide = true;
 
   //Inicializamos la interfaz
   usuarios: Usuario = {
-    uid: '', 
+    uid: '', // -> inicializamos con comillas simples porque es tipo STRING
     nombre: '',
     apellido: '',
     email: '',
@@ -38,7 +38,7 @@ export class RegistroComponent {
     public servicioRutas: Router
   ){}
 
-  //REGISTRO DE NUEVOS USUARIOS
+  // FUNCIÓN PARA EL REGISTRO DE NUEVOS USUARIOS
   async registrar(){
 
     // REGISTRO CON SERVICIO DE AUTH
@@ -48,28 +48,35 @@ export class RegistroComponent {
     }
     
     const res = await this.servicioAuth.registrar(credenciales.email, credenciales.password)
+    // el método THEN es una promesa que devuelve el mismo valor si todo sale bien
     .then(res => {
       alert("¡Se pudo registrar con éxito! :)");
 
       // el método NAVIGATE nos redirecciona a otra vista
-      
-      this.servicioRutas.navigate(['/inicio-sesion'])
+      this.servicioRutas.navigate(['/inicio']);
     })
-    //captura la falla y la convierte en un error
+    // el método CATCH captura una falla y la vuelve un error cuando la promesa salga mal
     .catch(error => {
       alert("Hubo un error al registrar un nuevo usuario :( \n"+error);
     })
 
-    //Constante UID captura el identificado de la BD
+    // Constante UID captura el identificado de la BD
     const uid = await this.servicioAuth.obtenerUid();
 
-    //Se le asigna al atributo de la interfaz esta constante
+    // Se le asigna al atributo de la interfaz esta constante
     this.usuarios.uid = uid;
 
-    // Llamamos a la función
+    /**
+     * SHA-256: Es un algoritmo de hash seguro que toma una entrada (en este caso la contraseña)
+     * y produce una cadena de caracteres HEXADECIMAL que va a representar a su hash
+     * toString: Convierte el resultado en la cadena de caracteres legible
+     */
+    this.usuarios.password = CryptoJS.SHA256(this.usuarios.password).toString();
+
+    // Llamamos a la función guardUsuario()
     this.guardarUsuario();
 
-    // Llamamos a la función limpiarInputs
+    // Llamamos a la función limpiarInputs() para ejecutarla
     this.limpiarInputs();
   }
 
@@ -81,6 +88,7 @@ export class RegistroComponent {
     .catch(err => {
       console.log('Error => ', err);
     })
+    
   }
 
   // Función para vaciar los inputs del formulario
