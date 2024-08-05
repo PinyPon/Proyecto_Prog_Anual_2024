@@ -1,9 +1,8 @@
 export interface Usuario {
-    uid: string | any;//any es indefinido o lo que sea
+    uid: string | any; // atributos del tipo "any" reciben vacíos o indefinidos
     nombre: string;
     apellido: string;
     email: string;
-    rol: string;//sujeto a revision.
+    rol: string;
     password: string;
-    permisos: boolean; //si no sirve, sacar.
 }
