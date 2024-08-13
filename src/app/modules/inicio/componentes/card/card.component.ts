@@ -18,7 +18,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo de flores",
         precio: 5,
-        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",     
+        imagen: "../../../../../../../../../../../../../../assets/1.jpg",     
         alt: "https://i.pinimg.com/236x/76/81/a9/7681a926a2e45278194d3c55f91e0632.jpg"
        },
        {
@@ -26,7 +26,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo de flores",
         precio: 5,
-        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
+        imagen: "../../../../../../../../../../../../../../assets/1.jpg",
         alt: ""
        },
        {
@@ -34,7 +34,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo de flores",
         precio: 500,
-        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
+        imagen: "../../../../../../../../../../../../../../assets/1.jpg",
         alt: ""
        },
        {
@@ -42,7 +42,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo de flores",
         precio: 5000,
-        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
+        imagen: "../../../../../../../../../../../../../../assets/1.jpg",
         alt: ""
        },
        {
@@ -50,7 +50,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo de flores",
         precio: 5000,
-        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
+        imagen: "../../../../../../../../../../../../../../assets/1.jpg",
         alt: ""
        },
        {
@@ -58,7 +58,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo de flores",
         precio: 5000,
-        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
+        imagen: "../../../../../../../../../../../../../../assets/1.jpg",
         alt: ""
        },
        {
@@ -66,7 +66,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo de flores",
         precio: 5000,
-        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
+        imagen: "../../../../../../../../../../../../../assets/2.jpg",
         alt: ""
        },
        {
@@ -74,7 +74,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo de flores",
         precio: 5000,
-        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
+        imagen: "../../../../../../../../../../../../../../assets/3.jpg",
         alt: ""
        },
        {
@@ -82,7 +82,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo de flores",
         precio: 5000,
-        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
+        imagen: "../../../../../../../../../../../../../../assets/4.jpg",
         alt: ""
        },
        {
@@ -90,7 +90,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo de flores",
         precio: 5000,
-        imagen: "https://i.pinimg.com/236x/e1/74/8b/e1748bcf430e9dcb622ea6fb6d0c7cde.jpg",
+        imagen: "../../../../../../../../../../../../../../assets/5.jpg",
         alt: ""
        }
      ]
