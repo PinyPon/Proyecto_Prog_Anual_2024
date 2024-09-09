@@ -5,9 +5,9 @@ import { AdminComponent } from './page/admin/admin.component';
 const routes: Routes = [
 
   //Ruteo para que "veas"
-    {
-      path:"admin",component: AdminComponent
-    }
+  {
+    path:"admin", component:AdminComponent
+  }
   
 ];
 

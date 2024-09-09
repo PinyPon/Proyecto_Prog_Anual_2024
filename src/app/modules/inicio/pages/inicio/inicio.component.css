@@ -1,8 +1,4 @@
 .inicio{
-
-    background: -webkit-linear-gradient(to top, #f7e6fc, #572f63);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #f7e6fc, #572f63); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-
-
+    background: -webkit-linear-gradient(to top, #ffffff, #582f66);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #ffffff, #582f66); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

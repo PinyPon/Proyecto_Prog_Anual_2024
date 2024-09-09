@@ -18,15 +18,15 @@ export class CardComponent {
         nombre: "",
         description: "Ramo de flores",
         precio: 5,
-        imagen: "../../../../../../../../../../../../../../assets/1.jpg",     
-        alt: "https://i.pinimg.com/236x/76/81/a9/7681a926a2e45278194d3c55f91e0632.jpg"
+        imagen: "../../../../../../../../../../../../../../assets/2.jpg",     
+        alt: "https://i.pinimg.com/236x/76/82/a9/7682a926a2e45278294d3c55f92e0632.jpg"
        },
        {
         id: "",
         nombre: "",
         description: "Ramo de flores",
         precio: 5,
-        imagen: "../../../../../../../../../../../../../../assets/1.jpg",
+        imagen: "../../../../../../../../../../../../../../assets/2.jpg",
         alt: ""
        },
        {
@@ -34,7 +34,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo de flores",
         precio: 500,
-        imagen: "../../../../../../../../../../../../../../assets/1.jpg",
+        imagen: "../../../../../../../../../../../../../../assets/2.jpg",
         alt: ""
        },
        {
@@ -42,7 +42,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo de flores",
         precio: 5000,
-        imagen: "../../../../../../../../../../../../../../assets/1.jpg",
+        imagen: "../../../../../../../../../../../../../../assets/2.jpg",
         alt: ""
        },
        {
@@ -50,7 +50,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo de flores",
         precio: 5000,
-        imagen: "../../../../../../../../../../../../../../assets/1.jpg",
+        imagen: "../../../../../../../../../../../../../../assets/2.jpg",
         alt: ""
        },
        {
@@ -58,7 +58,7 @@ export class CardComponent {
         nombre: "",
         description: "Ramo de flores",
         precio: 5000,
-        imagen: "../../../../../../../../../../../../../../assets/1.jpg",
+        imagen: "../../../../../../../../../../../../../../assets/2.jpg",
         alt: ""
        },
        {
