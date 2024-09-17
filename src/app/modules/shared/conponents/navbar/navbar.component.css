@@ -7,6 +7,8 @@
   justify-content: right;
 }
 
+
+
 /*Corresponde a pantallas mas chicas*/
 @media (min-width: 300px) and (max-width: 700px) {
   mat-toolbar {
@@ -41,3 +43,4 @@ background: linear-gradient(to right, #ebcbf3, #6a3a79); /* W3C, IE 10+/ Edge, F
   }
 
 }
+
