@@ -7,7 +7,9 @@
   justify-content: right;
 }
 
-
+.offcanvas{
+  background-color:beige;
+}
 
 /*Corresponde a pantallas mas chicas*/
 @media (min-width: 300px) and (max-width: 700px) {
