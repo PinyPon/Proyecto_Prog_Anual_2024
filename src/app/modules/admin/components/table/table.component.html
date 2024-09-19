@@ -1,51 +1,58 @@
+<body>
+    <div class="estilo">
+        <!-- TABLA DE PRODUCTOS -->
+        <table class="table">
+            <thead>
+                <tr  class="encabezado">
+                    <th scope="col">#</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Categoría</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
 
-    <!-- TABLA DE PRODUCTOS -->
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Imagen</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Descripción</th>
-                <th scope="col">Categoría</th>
-                <th scope="col">Acciones</th>
-            </tr>
-        </thead>
+            <tbody>
+                <tr *ngFor="let producto of coleccionProductos">
+                    <th scope="row">1</th>
 
-        <tbody>
-            <tr *ngFor="let producto of coleccionProductos">
-                <th scope="row">1</th>
+                    <td>
+                        <img src="{{producto.imagen}}" alt="{{producto.alt}}" width="100px">
+                    </td>
+                    <td>{{producto.nombre}}</td>
+                    <td>{{producto.precio}}</td>
+                    <td>{{producto.descripcion}}</td>
+                    <td>{{producto.categoria}}</td>
 
-                <td>
-                    <img src="{{producto.imagen}}" alt="{{producto.alt}}" width="100px">
-                </td>
-                <td>{{producto.nombre}}</td>
-                <td>{{producto.precio}}</td>
-                <td>{{producto.descripcion}}</td>
-                <td>{{producto.categoria}}</td>
+                    <!-- ACCIONES -->
+                    <td>
+                        <button id="btn-edit" title="Editar" type="button" class="btn btn-outline-warning"
+                            data-bs-toggle="modal" data-bs-target="#editarProducto" (click)="mostrarEditar(producto)">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                    </td>
+                    <td>
+                        <button id="btn-delete" title="Eliminar" type="button" class="btn btn-outline-danger"
+                            data-bs-toggle="modal" data-bs-target="#eliminarProducto" (click)="mostrarBorrar(producto)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
-                <!-- ACCIONES -->
-                <td>
-                    <button id="btn-edit" title="Editar" type="button" class="btn btn-outline-warning"
-                        data-bs-toggle="modal" data-bs-target="#editarProducto" (click)="mostrarEditar(producto)">
-                        <mat-icon>edit</mat-icon>
-                    </button>
-                </td>
-                <td>
-                    <button id="btn-delete" title="Eliminar" type="button" class="btn btn-outline-danger"
-                        data-bs-toggle="modal" data-bs-target="#eliminarProducto" (click)="mostrarBorrar(producto)">
-                        <mat-icon>delete</mat-icon>
-                    </button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+        <div class="boton">
+            <!-- BOTÓN DE AGREGAR NUEVOS PRODUCTOS -->
+            <button type="button" class="botonA btn" data-bs-toggle="modal"
+                data-bs-target="#agregarProducto">
+                Agregar un nuevo producto
+            </button>
+        </div>
 
-    <!-- BOTÓN DE AGREGAR NUEVOS PRODUCTOS -->
-    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#agregarProducto">
-        Agregar un nuevo producto
-    </button>
+
+    </div>
 
     <!-- MODAL PARA AGREGAR NUEVO PRODUCTO -->
     <div class="modal fade" id="agregarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -202,3 +209,5 @@
         </div>
     </div>
 
+
+</body>

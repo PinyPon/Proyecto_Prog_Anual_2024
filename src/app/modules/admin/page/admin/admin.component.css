@@ -5,3 +5,17 @@
     justify-content: center;
 }
 
+body{
+    background: -webkit-linear-gradient(to top, #fadddd, #E7CCCC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #fadddd, #E7CCCC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* 
+Paleta:
+
+"Crema": EDE8DC
+Rosa: E7CCCC
+BB9CC0
+Verde oscuro: A5B68D
+Verde claro: C1CFA1 
+*/

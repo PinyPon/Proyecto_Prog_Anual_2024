@@ -1,54 +1,71 @@
-body{
-    background: -webkit-linear-gradient(to top, #f7e6fc, #572f63);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #f7e6fc, #572f63); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-}
-
-
-
-.boton{
+.registro {
+    background: -webkit-linear-gradient(to top, antiquewhite, #E7CCCC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, antiquewhite, #E7CCCC); 
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 40%;
+    padding: 10px;
+    text-align: center;
 }
-.form{
+
+.container{
+    width: 500px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.material-icon{
+    justify-content: center;
+
+}
+
+.form {
     padding: 10%;
 }
-.lista{
+
+.lista {
     display: flex;
     justify-content: center;
 
 }
-.contenedor{
+
+.contenedor {
     padding-bottom: 10%;
 }
 
 /* Ajustes para pantallas medianas y grandes */
 @media (min-width: 768px) {
     .container {
-        margin: auto; /* Centrar el contenedor */
+        margin: auto;
+        /* Centrar el contenedor */
     }
 
     .mat-form-field {
-        width: 100%; /* Asegurar que los campos de formulario ocupen todo el ancho */
+        width: 100%;
+        /* Asegurar que los campos de formulario ocupen todo el ancho */
     }
 
     .btn-primary {
-        width: 100%; /* Botón de registro ocupa todo el ancho disponible */
-        max-width: 200px; /* Ancho máximo del botón */
-        margin-top: 10px; /* Espacio superior */
+        width: 100%;
+        /* Botón de registro ocupa todo el ancho disponible */
+        max-width: 200px;
+        /* Ancho máximo del botón */
+        margin-top: 10px;
+        /* Espacio superior */
     }
 }
 
 /* Ajustes para pantallas pequeñas */
 @media (min-width:300px) and (max-width: 767px) {
     .mat-form-field {
-        width: 100%; /* Asegurar que los campos de formulario ocupen todo el ancho */
+        width: 100%;
+        /* Asegurar que los campos de formulario ocupen todo el ancho */
     }
 
     .btn-primary {
-        width: 100%; /* Botón de registro ocupa todo el ancho disponible */
-        max-width: 200px; /* Ancho máximo del botón */
+        width: 100%;
+        /* Botón de registro ocupa todo el ancho disponible */
+        max-width: 200px;
+        /* Ancho máximo del botón */
     }
 }

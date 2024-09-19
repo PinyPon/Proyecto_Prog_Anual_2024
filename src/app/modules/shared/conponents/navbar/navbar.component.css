@@ -12,20 +12,31 @@
 }
 
 /*Corresponde a pantallas mas chicas*/
-@media (min-width: 300px) and (max-width: 700px) {
-  mat-toolbar {
-    background: #E6DADA;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #ebcbf3, #6a3a79);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #ebcbf3, #6a3a79); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+
+@media (min-width: 300px) and (max-width: 700px) {
+  
+  mat-toolbar {
+background: -webkit-linear-gradient(to top, #EDE8DC, #E7CCCC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #EDE8DC, #E7CCCC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+/* 
+Paleta:
+
+EDE8DC
+E7CCCC
+A5B68D
+C1CFA1 
+*/
+
+
+  }
+
+  #GmenuProducto{
+    display: none;
   }
 
   #menuInicio {
-    display: none;
-  }
-  
-  
-  #menuProducto {
     display: none;
   }
 
@@ -34,10 +45,7 @@ background: linear-gradient(to right, #ebcbf3, #6a3a79); /* W3C, IE 10+/ Edge, F
 /*Corresponde a pantallas más grandes*/
 @media (min-width: 700px) {
   mat-toolbar {
-    background: #E6DADA;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #ebcbf3, #6a3a79);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ebcbf3, #6a3a79); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
+    background:  #E7CCCC;
   }
 
   #menuSelecciones {

@@ -1,6 +1,10 @@
 body{
-    background: -webkit-linear-gradient(to top, #f7e6fc, #572f63);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #f7e6fc, #572f63); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to top, antiquewhite, #E7CCCC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, antiquewhite, #E7CCCC);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
 }
 
 .container{
@@ -13,4 +17,20 @@ body{
 .boton{
     width: 120px;
     margin: auto;
+}
+
+.material-icon{
+    justify-content: center;
+
+}
+
+
+.lista {
+    display: flex;
+    justify-content: center;
+
+}
+
+.contenedor {
+    padding-bottom: 10%;
 }
