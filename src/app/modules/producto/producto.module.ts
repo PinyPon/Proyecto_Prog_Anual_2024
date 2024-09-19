@@ -5,13 +5,15 @@ import { ProductoRoutingModule } from './producto-routing.module';
 import { RgrandesComponent } from './rgrandes/rgrandes.component';
 import { RmedianosComponent } from './rmedianos/rmedianos.component';
 import { RcasamientoComponent } from './rcasamiento/rcasamiento.component';
+import { UnidadComponent } from './unidad/unidad.component';
 
 
 @NgModule({
   declarations: [
     RgrandesComponent,
     RmedianosComponent,
-    RcasamientoComponent
+    RcasamientoComponent,
+    UnidadComponent
   ],
   imports: [
     CommonModule,
