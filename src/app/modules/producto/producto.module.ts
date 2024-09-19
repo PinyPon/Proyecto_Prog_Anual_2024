@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { ProductoRoutingModule } from './producto-routing.module';
 import { RgrandesComponent } from './rgrandes/rgrandes.component';
 import { RmedianosComponent } from './rmedianos/rmedianos.component';
+import { RcasamientoComponent } from './rcasamiento/rcasamiento.component';
 
 
 @NgModule({
   declarations: [
     RgrandesComponent,
-    RmedianosComponent
+    RmedianosComponent,
+    RcasamientoComponent
   ],
   imports: [
     CommonModule,
