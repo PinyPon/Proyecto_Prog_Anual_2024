@@ -17,20 +17,19 @@
 @media (min-width: 300px) and (max-width: 700px) {
   
   mat-toolbar {
-background: -webkit-linear-gradient(to top, #EDE8DC, #E7CCCC);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #EDE8DC, #E7CCCC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: -webkit-linear-gradient(to top, #EDE8DC, #E7CCCC);
+background: linear-gradient(to bottom, #EDE8DC, #E7CCCC);
+}
 
 /* 
 Paleta:
 
-EDE8DC
-E7CCCC
-A5B68D
-C1CFA1 
+"Crema": EDE8DC
+Rosa: E7CCCC
+BB9CC0
+Verde oscuro: A5B68D
+Verde claro: C1CFA1 
 */
-
-
-  }
 
   #GmenuProducto{
     display: none;

@@ -1,11 +1,21 @@
 body{
-    background: -webkit-linear-gradient(to top, antiquewhite, #E7CCCC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, antiquewhite, #E7CCCC);  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to top, #EDE8DC, #E7CCCC);
+    background: linear-gradient(to bottom, #EDE8DC, #E7CCCC);  
     display: flex;
     justify-content: center;
     padding: 10px;
     text-align: center;
 }
+
+/* 
+Paleta:
+
+"Crema": EDE8DC
+Rosa: E7CCCC
+BB9CC0
+Verde oscuro: A5B68D
+Verde claro: C1CFA1 
+*/
 
 .container{
     display: flex;
