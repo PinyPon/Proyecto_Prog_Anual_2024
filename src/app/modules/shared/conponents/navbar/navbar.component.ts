@@ -12,6 +12,7 @@ export class NavbarComponent {
   logueado = true;
   deslogueado = false;
 
+  
   constructor(
     public servicioAuth : AuthService,
     public servicioRutas : Router,

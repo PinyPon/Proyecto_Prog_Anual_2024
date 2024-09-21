@@ -1,50 +1,42 @@
-.modal-footer{
+body {
+    font-family: serif;
+    margin: 0; /* Elimina márgenes del body */
+    padding: 0; /* Elimina padding del body */
+}
+
+.modal-footer {
     text-align: center;
     justify-content: center;
     font-family: serif;
 }
 
-table, td, tr, th{
+table, td, tr, th {
     background-color: antiquewhite;
+    border-collapse: collapse; /* Elimina espacios entre celdas */
 }
 
-.encabezado{
-    border-radius: 50px;
+.table {
+    width: 100%; /* Asegura que la tabla use todo el ancho disponible */
+    overflow: hidden; /* Recorta bordes en hijos */
 }
 
-.table{
-    border-radius: 50px;
-}
-.estilo{
+.estilo {
     background-color: antiquewhite;
-    border-radius: 50px;
     border-color: black;
+    padding: 20px; /* Espaciado interno */
 }
 
-/* 
-Paleta:
-
-"Crema": EDE8DC
-Rosa: E7CCCC
-BB9CC0
-Verde oscuro: A5B68D
-Verde claro: C1CFA1 
-*/
-
-.botonA{
-    background-color:#A5B68D;
-    color: #EDE8DC;
+.botonA {
+    background-color: #A5B68D;
+    color: rgb(255, 245, 231);
     font-family: serif;
-    border-radius: 100px;
+    border-radius: 50rem;
 }
-.boton{
+
+.boton {
     text-align: center;
     justify-content: center;
     align-items: center;
     padding-bottom: 2%;
 }
 
-body{
-    font-family: serif;
-    border-radius: 100px;
-}

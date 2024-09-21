@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { RmedianosComponent } from '../producto/rmedianos/rmedianos.component';
 import { RgrandesComponent} from '../producto/rgrandes/rgrandes.component'
+import { RcasamientoComponent } from './rcasamiento/rcasamiento.component';
+import { UnidadComponent } from './unidad/unidad.component';
 
 
 
@@ -13,6 +15,12 @@ const routes: Routes = [
   },
   {
     path: "grandes", component: RgrandesComponent
+  },
+  {
+    path: "casamiento", component: RcasamientoComponent
+  },
+  {
+    path: "unidad", component: UnidadComponent
   }
 ];
 
