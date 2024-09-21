@@ -6,6 +6,9 @@ import { RgrandesComponent } from './rgrandes/rgrandes.component';
 import { RmedianosComponent } from './rmedianos/rmedianos.component';
 import { RcasamientoComponent } from './rcasamiento/rcasamiento.component';
 import { UnidadComponent } from './unidad/unidad.component';
+import {MatCardModule} from '@angular/material/card';
+import { FormsModule,  } from '@angular/forms';
+
 
 
 @NgModule({
@@ -17,7 +20,9 @@ import { UnidadComponent } from './unidad/unidad.component';
   ],
   imports: [
     CommonModule,
-    ProductoRoutingModule
+    ProductoRoutingModule,
+    MatCardModule,
+    FormsModule
   ]
 })
 export class ProductoModule { }
