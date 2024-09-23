@@ -1,6 +1,6 @@
 body{
-    background: -webkit-linear-gradient(to top, antiquewhite, #E7CCCC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, antiquewhite, #E7CCCC);
+    background: -webkit-linear-gradient(to top,#EDE8DC, #C1CFA1, #A5B68D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #EDE8DC, #C1CFA1, #A5B68D);
 }
 .example-card{
     background-color: rgb(217, 224, 235);
@@ -9,6 +9,10 @@ body{
     overflow: hidden; /* Recortar contenido que sobrepase la tarjeta */
     width: 100%; /* Ancho fijo de 16rem para las tarjetas */
     transition: transform 0.3s ease; /* Animación suave para el escalado al pasar el mouse */
+}
+
+.titulo{
+    margin-top: 1rem;
 }
 
 

@@ -1,8 +1,6 @@
 .inicio {
-    background-color: antiquewhite;
-/* 
-    background: -webkit-linear-gradient(to top, #fbe6fc, #bc99fc);
-    background: linear-gradient(to bottom, #f7e6fc, #bc99fc); */
+    background: -webkit-linear-gradient(to top,#EDE8DC, #EDE8DC, #C1CFA1, #A5B68D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #EDE8DC, #EDE8DC, #C1CFA1, #A5B68D);
 }
 
 

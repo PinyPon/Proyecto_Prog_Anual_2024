@@ -27,6 +27,8 @@ export class RmedianosComponent {
 /** 
  * import { Producto } from 'src/app/models/producto';
 import { CrudService } from '../../admin/services/crud.service';
+
+
  * coleccionProductos: Producto[] = [];
 
   constructor(public servicioCrud: CrudService) { }
