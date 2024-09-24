@@ -3,13 +3,17 @@ body{
     background: linear-gradient(to bottom, #EDE8DC, #C1CFA1, #A5B68D);
 }
 .example-card{
-    background-color: rgb(217, 224, 235);
+    background-color: #ecebd5;
     border-radius: 0.75rem; /* Esquinas redondeadas de 0.75rem */
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Sombra sutil para dar profundidad */
     overflow: hidden; /* Recortar contenido que sobrepase la tarjeta */
     width: 100%; /* Ancho fijo de 16rem para las tarjetas */
     transition: transform 0.3s ease; /* Animación suave para el escalado al pasar el mouse */
 }
+/* 
+#ecebd5
+#e2d9bc */
+
 
 .titulo{
     margin-top: 1rem;
@@ -18,7 +22,7 @@ body{
 
 .example-card:hover {
     transform: scale(1.05); /* Aumenta el tamaño de la tarjeta un 5% al pasar el mouse */
-    background-color:  rgb(189, 198, 212); /* aca cambias el color del fondo del card */
+    background-color:  #e2d9bc; /* aca cambias el color del fondo del card */
     cursor: pointer;
   }
 
