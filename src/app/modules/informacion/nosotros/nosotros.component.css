@@ -34,6 +34,16 @@ img{
     position: absolute;
 }
 
+.MV{
+    margin-top: 0%;
+    padding-top: 0%;
+}
+
+.imagenVM{
+    width: 20rem;
+    transform: translateX(-15%);
+    margin-top: -2rem;
+}
 
 .imagen {
     position: absolute;
@@ -45,13 +55,17 @@ img{
 .imagen1 {
     left: -350px;
     /* Empieza fuera del viewport a la izquierda */
-    animation: slideIn1 3s ease-in-out forwards;
+    animation: slideIn1 2s ease-in-out forwards;
 }
 
 .imagen2 {
     right: 350px;
     /* Empieza fuera del viewport a la izquierda */
     animation: slideIn2 1s ease-in-out forwards;
+}
+
+.imagen3{
+    animation: slideIn3 3s ease-in-out forwards;
 }
 
 /*@keyframes: Define el movimiento de las imágenes de izquierda a derecha.*/
@@ -67,6 +81,14 @@ img{
     to {
         right: 700px;
         /* Posición final */
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn3{
+    to{
+        width: 20rem;
+        margin-top: -3rem;
         opacity: 1;
     }
 }
