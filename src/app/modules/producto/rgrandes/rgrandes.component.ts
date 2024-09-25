@@ -14,7 +14,7 @@ export class RgrandesComponent {
 
   ngOnInit(): void {
     this.servicioCrud.obtenerProducto().subscribe(producto => {
-      this.coleccionProductos = producto;
+      this.coleccionProductos = producto.filter(producto => producto.categoria === 'Ramo Grande');
 
     })
   }

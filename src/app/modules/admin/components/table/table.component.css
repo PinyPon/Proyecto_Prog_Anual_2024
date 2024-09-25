@@ -1,9 +1,10 @@
-body {
-    font-family: serif;
-    margin: 0; /* Elimina márgenes del body */
-    padding: 0; /* Elimina padding del body */
-}
+body{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    background-color: antiquewhite;
 
+}
 .modal-footer {
     text-align: center;
     justify-content: center;
@@ -12,12 +13,10 @@ body {
 
 table, td, tr, th {
     background-color: antiquewhite;
-    border-collapse: collapse; /* Elimina espacios entre celdas */
 }
 
 .table {
     width: 100%; /* Asegura que la tabla use todo el ancho disponible */
-    overflow: hidden; /* Recorta bordes en hijos */
 }
 
 .estilo {
@@ -33,6 +32,12 @@ table, td, tr, th {
     border-radius: 50rem;
 }
 
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .boton {
     text-align: center;
     justify-content: center;
@@ -40,3 +45,14 @@ table, td, tr, th {
     padding-bottom: 2%;
 }
 
+.col-sm-6{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: aliceblue;
+    width: 10rem;
+    border-radius: 3rem;
+    text-align: bottom;
+    align-items: bottom;
+    justify-content: bottom;
+    font-family: serif;
+}

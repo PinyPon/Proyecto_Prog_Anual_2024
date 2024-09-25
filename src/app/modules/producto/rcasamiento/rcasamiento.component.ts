@@ -15,7 +15,8 @@ export class RcasamientoComponent {
   ngOnInit(): void {
     // subscribe -> método de notificación de cambios (observable)
     this.servicioCrud.obtenerProducto().subscribe(producto => {
-      this.coleccionProductos = producto;
+
+      this.coleccionProductos = producto.filter(producto => producto.categoria === 'Ramo Casamiento');
 
     })
   }

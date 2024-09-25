@@ -16,7 +16,7 @@ export class UnidadComponent {
 
   ngOnInit(): void {
     this.servicioCrud.obtenerProducto().subscribe(producto => {
-      this.coleccionProductos = producto;
+      this.coleccionProductos = producto.filter(producto => producto.categoria === 'unidad');
 
     })
   }

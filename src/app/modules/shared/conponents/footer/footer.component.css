@@ -1,22 +1,76 @@
-#footer{
-    background-color: #E7CCCC;
-    width: 100%;
+.espa {
+    padding: 1%;
 }
-footer {
-    background-color: #E7CCCC;
-    margin-top: 0px;
-    width: 100%;
-    justify-content: end;
-    margin-bottom: 0px;
 
+.pie-pagina {
+    width: 100%;
+    background-color: #E7CCCC;
+    position: absolute;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
 }
 
 /* 
 Paleta:
-
 "Crema": EDE8DC
 Rosa: E7CCCC
 BB9CC0
 Verde oscuro: A5B68D
 Verde claro: C1CFA1 
 */
+
+.pie-pagina .grupo-1 .box figure {
+    width: 75%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    color: aqua;
+    padding: 3%;
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #C1CFA1;
+    padding: 15px 10px;
+    text-align: center;
+    color: #C1CFA1;
+    height: 50%;
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 15px;
+}
+
+@media screen and (max-width:800px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
