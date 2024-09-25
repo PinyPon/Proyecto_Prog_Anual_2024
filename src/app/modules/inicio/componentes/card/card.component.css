@@ -46,15 +46,7 @@ p{
     transform: scale(0.5);
 }
 
-.bi-cart-fill{
-    color: #EDE8DC;
-    overflow: hidden;
-}
 
-.bi-cart-fill:hover{
-    color: black;
-    transform: scale(0.5);
-}
 
 .btn {
     display: flex;

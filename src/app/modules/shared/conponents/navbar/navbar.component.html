@@ -1,18 +1,11 @@
 <mat-toolbar>
 
-    <button id="menuSelecciones" mat-icon-button class="example-icon"[matMenuTriggerFor]="seccion"> 
-      <mat-icon>menu</mat-icon>
-    </button>
+      <button id="miniPantalla" mat-button stype="button" data-bs-toggle="offcanvas" 
+  data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="bi bi-list"></i></button>
   <!-- Menú desplegable para pantallas pequeñas -->
-    <mat-menu #seccion="matMenu">
-      <button mat-menu-item routerLink="/inicio">Inici0ooo</button>  <!-- ???? -->
-  
-      
-      <!-- <button mat-menu-item routerLink="/producto">General</button> -->
 
+    <mat-menu #seccion="matMenu">
       
-    <button id="menuProducto" mat-button stype="button" data-bs-toggle="offcanvas" 
-    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Menú</button>
     </mat-menu>
     <span></span>
     <!--boton inicio-->
@@ -30,7 +23,7 @@
 
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
-          Menú
+          🌷  Menú 🌷
         </h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>

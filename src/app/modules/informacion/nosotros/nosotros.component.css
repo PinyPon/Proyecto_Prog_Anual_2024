@@ -1,6 +1,6 @@
 body {
-    background: -webkit-linear-gradient(to top, #EDE8DC, #C1CFA1, #A5B68D);
-    background: linear-gradient(to bottom, #EDE8DC, #C1CFA1, #A5B68D);
+    background: -webkit-linear-gradient(to top, #EDE8DC, #C1CFA1);
+    background: linear-gradient(to bottom, #EDE8DC, #C1CFA1);
     margin-bottom: 0%;
     font-family: serif;
 }
@@ -11,15 +11,40 @@ body {
     border-color: black;
 }
 
+.estrellitas{
+    width: 20%;
+    margin-top: 0%;
+}
+
+.titulazo{
+    background-color: #C1CFA1;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+}
+
+.p-3{
+    text-align: center;
+}
+
 .row{
     border-color: black;
 
 }
 
+b{
+    font-size: 4rem;
+}
+
+h2, b{
+    text-align: center;
+    font-family: serif;
+}
+
 .container {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 60vh;
 }
 
 img{

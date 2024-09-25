@@ -38,10 +38,10 @@ Verde claro: C1CFA1
   #GmenuProducto{
     display: none;
   }
-
   #menuInicio {
     display: none;
   }
+ 
 
 }
 
@@ -52,6 +52,9 @@ Verde claro: C1CFA1
   }
 
   #menuSelecciones {
+    display: none;
+  }
+  #miniPantalla{
     display: none;
   }
 

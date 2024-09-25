@@ -1,11 +1,20 @@
 .registro {
-    background: -webkit-linear-gradient(to top, antiquewhite, #E7CCCC);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, antiquewhite, #E7CCCC); 
+    background: -webkit-linear-gradient(to top, #EDE8DC, #d2dfb4); 
+    background: linear-gradient(to bottom, #EDE8DC, #d2dfb4); 
     display: flex;
     justify-content: center;
     padding: 10px;
     text-align: center;
 }
+
+/* 
+Paleta:
+"Crema": EDE8DC
+Rosa: E7CCCC
+BB9CC0
+Verde oscuro: A5B68D
+Verde claro: C1CFA1 
+*/
 
 .container{
     width: 500px;
@@ -17,6 +26,10 @@
 .material-icon{
     justify-content: center;
 
+}
+
+h1{
+    font-family: serif;
 }
 
 .form {
