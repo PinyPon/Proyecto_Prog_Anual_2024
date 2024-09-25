@@ -16,6 +16,7 @@ export class RcasamientoComponent {
     // subscribe -> método de notificación de cambios (observable)
     this.servicioCrud.obtenerProducto().subscribe(producto => {
 
+      // Filtro para que solo las card se cierta categoria se muestren en esta pagina
       this.coleccionProductos = producto.filter(producto => producto.categoria === 'Ramo Casamiento');
 
     })

@@ -6,8 +6,7 @@
     width: 100%; /* Ancho fijo de 16rem para las tarjetas */
     transition: transform 0.3s ease; /* Animación suave para el escalado al pasar el mouse */
 }
-#ecebd5
-#e2d9bc
+
 
 .example-card:hover {
     transform: scale(1.05); /* Aumenta el tamaño de la tarjeta un 5% al pasar el mouse */
@@ -32,4 +31,45 @@ p{
     font-family: 'Times New Roman', Times, serif ;
 }
 
+.boton {
+    display: flex;
+    justify-content: center;
+}
+
+.bi-heart-fill{
+    color: #EDE8DC;
+    overflow: hidden;
+}
+
+.bi-heart-fill:hover{
+    color: crimson;
+    transform: scale(0.5);
+}
+
+.bi-cart-fill{
+    color: #EDE8DC;
+    overflow: hidden;
+}
+
+.bi-cart-fill:hover{
+    color: black;
+    transform: scale(0.5);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    background-color: #A5B68D;
+    /* Color de fondo del botón */
+    color: #fff;
+    /* Color de texto del botón */
+    padding: 0.5rem 1rem;
+    /* Relleno del botón */
+    text-decoration: none;
+    /* Quitar subrayado del enlace */
+    border-radius: 100rem;
+    /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+    /* Transición suave del color de fondo */
+}
 

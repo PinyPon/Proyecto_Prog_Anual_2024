@@ -21,6 +21,9 @@ const routes: Routes = [
   },
   {
     path:"",loadChildren:()=>import('./modules/admin/admin.module').then(m=>m.AdminModule)
+  },
+  {
+    path:"",loadChildren:()=>import('./modules/informacion/informacion.module').then(m=>m.InformacionModule)
   }
 ];
 

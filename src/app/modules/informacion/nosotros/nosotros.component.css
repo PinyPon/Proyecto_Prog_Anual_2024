@@ -1,0 +1,72 @@
+body {
+    background: -webkit-linear-gradient(to top, #EDE8DC, #C1CFA1, #A5B68D);
+    background: linear-gradient(to bottom, #EDE8DC, #C1CFA1, #A5B68D);
+    margin-bottom: 0%;
+    font-family: serif;
+}
+.texto{
+    padding-top: 5rem;
+    margin-right: 5rem;
+    margin-left: 4rem;
+    border-color: black;
+}
+
+.row{
+    border-color: black;
+
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+img{
+    width: 27rem;
+    margin-top: 3rem;
+}
+
+.imag{
+    width: 35rem;
+    margin-top: 3rem;
+    opacity: 0;
+    position: absolute;
+}
+
+
+.imagen {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
+.imagen1 {
+    left: -350px;
+    /* Empieza fuera del viewport a la izquierda */
+    animation: slideIn1 3s ease-in-out forwards;
+}
+
+.imagen2 {
+    right: 350px;
+    /* Empieza fuera del viewport a la izquierda */
+    animation: slideIn2 1s ease-in-out forwards;
+}
+
+/*@keyframes: Define el movimiento de las imágenes de izquierda a derecha.*/
+@keyframes slideIn1 {
+    to {
+        left: 300px;
+        /* Posición final */
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn2 {
+    to {
+        right: 700px;
+        /* Posición final */
+        opacity: 1;
+    }
+}
