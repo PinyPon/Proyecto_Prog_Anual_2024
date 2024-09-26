@@ -19,6 +19,10 @@ export class TableComponent {
 
   modalVisibleProducto: boolean = false;
 
+  nombreImagen!: string; // obtendra el nombre de la imagen
+
+  imagen!: string;// obtendra la ruta de la imagen
+
   // Definimos formulario para los productos
   /**
    * Atributos alfanuméricos (string) se inicializan con comillas simples
@@ -29,7 +33,7 @@ export class TableComponent {
     precio: new FormControl(0, Validators.required),
     descripcion: new FormControl('', Validators.required),
     categoria: new FormControl('', Validators.required),
-    imagen: new FormControl('', Validators.required),
+    // imagen: new FormControl('', Validators.required),
     alt: new FormControl('', Validators.required)
   })
 
@@ -52,29 +56,69 @@ export class TableComponent {
         precio: this.producto.value.precio!,
         descripcion: this.producto.value.descripcion!,
         categoria: this.producto.value.categoria!,
-        imagen: this.producto.value.imagen!,
+        imagen: '',
         alt: this.producto.value.alt!
       }
 
+      // Enviamos nombre y url de la imagen; definimos carpeta de imágenes como "productos"
+      await this.servicioCrud.subirImagen(this.nombreImagen, this.imagen, "productos")
+        .then(resp => {
+          // encapsulamos respuesta y envíamos la información obtenida
+          this.servicioCrud.obtenerUrlImagen(resp)
+            .then(url => {
+              // ahora método crearProducto recibe datos del formulario y URL creada
+              this.servicioCrud.crearProducto(nuevoProducto, url)
+                .then(producto => {
+                  Swal.fire({
+                    title: "¡Bien!",
+                    text: "¡Producto cargado exitosamente!",
+                    icon: "success"
+                  });
 
-      await this.servicioCrud.crearProducto(nuevoProducto)
-        .then(producto => {
-          Swal.fire({
-            title: "¡Bien!",
-            text: "¡Producto cargado exitosamente!",
-            icon: "success"
-          });
-          // Resetea el formulario y las casillas quedan vacías
-          this.producto.reset();
+                  // Resetea el formulario y las casillas quedan vacías
+                  this.producto.reset();
+                })
+                .catch(error => {
+                  Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "No pudimos guardar tu producto",
+                  });
+                })
+            })
         })
-        .catch(error => {
-          Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "No pudimos guardar tu producto",
-          });
-          this.producto.reset();
-        })
+    }
+  }
+
+  // CARGAR IMÁGENES
+  cargarImagen(event: any) {
+    // Variable para obtener el archivo subido desde el input del HTML
+    let archivo = event.target.files[0];
+
+    // Variable para crear un nuevo objeto de tipo "archivo" o "file" y leerlo
+    let reader = new FileReader();
+
+    if (archivo != undefined) {
+      /*
+        Llamamos a método readAsDataURL para leer toda la información recibida
+        Envíamos como parámetro al "archivo" porque será el encargador de tener la 
+        info ingresada por el usuario
+      */
+      reader.readAsDataURL(archivo);
+
+      // Definimos qué haremos con la información mediante función flecha
+      reader.onloadend = () => {
+        let url = reader.result;
+
+        // Condicionamos según una URL existente y no "nula"
+        if (url != null) {
+          // Definimos nombre de la imagen con atributo "name" del input
+          this.nombreImagen = archivo.name;
+
+          // Definimos ruta de la imagen según la url recibida
+          this.imagen = url.toString();
+        }
+      }
     }
   }
 
@@ -87,7 +131,12 @@ export class TableComponent {
   }
 
   borrarProducto() {
-    this.servicioCrud.eliminarProducto(this.productoSeleccionado.idProducto)
+    /*
+      Ahora envíamos tanto el ID del producto (para identificarlo en Firestore)
+      y la URL de la imagen (para identificarlo en Storage)
+      ID y URL <- identificadores propios de cada archivo en la Base de Datos
+    */
+    this.servicioCrud.eliminarProducto(this.productoSeleccionado.idProducto, this.productoSeleccionado.imagen)
       .then(respuesta => {
         Swal.fire({
           text: "Producto eliminado!",
@@ -99,7 +148,8 @@ export class TableComponent {
           icon: "error",
           title: "Oops...",
           text: "No pudimos guardar tu producto",
-        });      })
+        });
+      })
   }
 
   // EDITAR PRODUCTOS
@@ -108,14 +158,15 @@ export class TableComponent {
     this.productoSeleccionado = productoSeleccionado;
     /*
       Toma los valores del producto seleccionado y los va a
-      autocompletar en el formulario del modal (menos el ID)
+      autocompletar en el formulario del modal
+      (menos el ID y la URL de la imagen)
     */
     this.producto.setValue({
       nombre: productoSeleccionado.nombre,
       precio: productoSeleccionado.precio,
       descripcion: productoSeleccionado.descripcion,
       categoria: productoSeleccionado.categoria,
-      imagen: productoSeleccionado.imagen,
+      // imagen: productoSeleccionado.imagen,
       alt: productoSeleccionado.alt
     })
   }
@@ -131,15 +182,48 @@ export class TableComponent {
       precio: this.producto.value.precio!,
       descripcion: this.producto.value.descripcion!,
       categoria: this.producto.value.categoria!,
-      imagen: this.producto.value.imagen!,
+      imagen: this.productoSeleccionado.imagen,
       alt: this.producto.value.alt!
     }
 
+    // Verificamos si el usuario ingresa o no una nueva imagen
+    if (this.imagen) {
+      this.servicioCrud.subirImagen(this.nombreImagen, this.imagen, "productos")
+        .then(resp => {
+          this.servicioCrud.obtenerUrlImagen(resp)
+            .then(url => {
+              datos.imagen = url; // Actualizamos URL de la imagen en los datos del formulario
+
+              this.actualizarProducto(datos); // Actualizamos los datos
+
+              this.producto.reset(); // Vaciar las casillas del formulario
+            })
+            .catch(error => {
+              Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Hubo un error al guardar la imagen",
+              });
+
+              this.producto.reset();
+            })
+        })
+    } else {
+      /*
+        Actualizamos formulario con los datos recibidos del usuario, pero sin 
+        modificar la imagen ya existente en Firestore y en Storage
+      */
+      this.actualizarProducto(datos);
+    }
+  }
+
+  // ACTUALIZAR la información ya existente de los productos
+  actualizarProducto(datos: Producto) {
     // Enviamos al método el id del producto seleccionado y los datos actualizados
     this.servicioCrud.modificarProducto(this.productoSeleccionado.idProducto, datos)
       .then(producto => {
         Swal.fire({
-          text: "Producto editado con exito!",
+          text: "El producto se ha modificado con éxito.",
           icon: "success"
         });
       })
@@ -147,7 +231,7 @@ export class TableComponent {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "No pudimos guardar tu producto",
+          text: "Hubo un problema al modificar el producto: \n" + error,
         });
       })
   }

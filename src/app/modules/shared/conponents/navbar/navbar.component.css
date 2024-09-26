@@ -41,8 +41,15 @@ Verde claro: C1CFA1
   #menuInicio {
     display: none;
   }
- 
+}
 
+.selector, .tipografia{
+  font-family: serif;
+  background-color: #EDE8DC;
+}
+
+.offcanvas-title{
+  font-family: serif;
 }
 
 /*Corresponde a pantallas más grandes*/
