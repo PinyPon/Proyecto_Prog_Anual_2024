@@ -1,18 +1,28 @@
 <div class="container">
-  <div *ngFor="let i of info" class="contenido">
-    <mat-card class="example-card">
-      <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}">
-      <mat-card-content>
-        <p>
-          {{i.description}}
-          <br>
-          Precio: ${{i.precio}}
-        </p>
-      </mat-card-content>
-      <mat-card-actions class="boton">
-        <button mat-button class="btn"><i class="bi bi-heart-fill"></i></button>
-      </mat-card-actions>
-    </mat-card>
+  <div class="tarjetas">
+    <div *ngFor="let i of coleccionProductos" class="contenido">
+      <mat-card class="example-card">
+        <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" class="card-img-top">
+        <mat-card-content>
+          <p class="card-title">
+            {{i.categoria}}
+            <br>
+            Precio: ${{i.precio}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions class="boton">
+          <button mat-button class="btn" (click)="compra()">Comprar</button>
+
+          <button mat-button class="btn" *ngIf="mostrarMas"><i class="bi bi-heart-fill"></i>
+            <div class="accordion-body">
+             <p>{{i.descripcion}}</p>
+            </div></button>
+
+          
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
 </div>
+
 

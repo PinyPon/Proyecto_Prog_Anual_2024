@@ -1,6 +1,12 @@
 import { Component } from '@angular/core';
+import { CrudService } from 'src/app/modules/admin/services/crud.service';
+import { Producto } from 'src/app/models/producto';
+
 // IMPORTAMOS INTERFAZ
 import { Flores } from 'src/app/models/flores';
+
+// Sweet alert
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-card',
@@ -8,91 +14,29 @@ import { Flores } from 'src/app/models/flores';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-   // PROPIEDAD PÚBLICA (TIPO: ARRAY)
-   public info: Flores[];
-  
-   constructor(){
-     this.info = [
-      {
-        id: "",
-        nombre: "",
-        description: "Ramo de flores",
-        precio: 5,
-        imagen: "../../../../../../../../../../../../../../assets/2.jpg",     
-        alt: "https://i.pinimg.com/236x/76/82/a9/7682a926a2e45278294d3c55f92e0632.jpg"
-       },
-       {
-        id: "",
-        nombre: "",
-        description: "Ramo de flores",
-        precio: 5,
-        imagen: "../../../../../../../../../../../../../../assets/2.jpg",
-        alt: ""
-       },
-       {
-        id: "",
-        nombre: "",
-        description: "Ramo de flores",
-        precio: 500,
-        imagen: "../../../../../../../../../../../../../../assets/2.jpg",
-        alt: ""
-       },
-       {
-        id: "",
-        nombre: "",
-        description: "Ramo de flores",
-        precio: 5000,
-        imagen: "../../../../../../../../../../../../../../assets/2.jpg",
-        alt: ""
-       },
-       {
-        id: "",
-        nombre: "",
-        description: "Ramo de flores",
-        precio: 5000,
-        imagen: "../../../../../../../../../../../../../../assets/2.jpg",
-        alt: ""
-       },
-       {
-        id: "",
-        nombre: "",
-        description: "Ramo de flores",
-        precio: 5000,
-        imagen: "../../../../../../../../../../../../../../assets/2.jpg",
-        alt: ""
-       },
-       {
-        id: "",
-        nombre: "",
-        description: "Ramo de flores",
-        precio: 5000,
-        imagen: "../../../../../../../../../../../../../assets/2.jpg",
-        alt: ""
-       },
-       {
-        id: "",
-        nombre: "",
-        description: "Ramo de flores",
-        precio: 5000,
-        imagen: "../../../../../../../../../../../../../../assets/3.jpg",
-        alt: ""
-       },
-       {
-        id: "",
-        nombre: "",
-        description: "Ramo de flores",
-        precio: 5000,
-        imagen: "../../../../../../../../../../../../../../assets/4.jpg",
-        alt: ""
-       },
-       {
-        id: "",
-        nombre: "",
-        description: "Ramo de flores",
-        precio: 5000,
-        imagen: "../../../../../../../../../../../../../../assets/5.jpg",
-        alt: ""
-       }
-     ]
-   }
+  coleccionProductos: Producto[] = [];
+
+  mostrarMas: boolean = false;
+
+  constructor(public servicioCrud: CrudService) { }
+
+  ngOnInit(): void {
+    // subscribe -> método de notificación de cambios (observable)
+    this.servicioCrud.obtenerProducto().subscribe(producto => {
+
+      // Filtro para que solo las card se cierta categoria se muestren en esta pagina
+      this.coleccionProductos = producto;
+    })
+  }
+  compra() {
+    Swal.fire({
+      title: "Sweet!",
+      text: "Modal with a custom image.",
+      imageUrl: "{{imagen.}}",
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: "Custom image"
+    });
+  }
 }
+

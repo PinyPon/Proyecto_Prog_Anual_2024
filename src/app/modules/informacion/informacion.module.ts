@@ -14,6 +14,10 @@ import { PreguntasComponent } from './preguntas/preguntas.component';
   imports: [
     CommonModule,
     InformacionRoutingModule
+  ],
+  exports: [
+    NosotrosComponent,
+    PreguntasComponent
   ]
 })
 export class InformacionModule { }

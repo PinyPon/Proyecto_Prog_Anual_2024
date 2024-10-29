@@ -23,6 +23,10 @@ import { FormsModule,  } from '@angular/forms';
     ProductoRoutingModule,
     MatCardModule,
     FormsModule
+  ],
+  exports: [
+    MatCardModule,
+    FormsModule
   ]
 })
 export class ProductoModule { }

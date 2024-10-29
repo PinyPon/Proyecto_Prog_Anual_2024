@@ -20,6 +20,7 @@ import {MatCardModule} from '@angular/material/card';
     InicioComponent,
     CardComponent,
     CarrouselComponent,
+
   // FooterComponent
   ],
   imports: [
@@ -27,6 +28,12 @@ import {MatCardModule} from '@angular/material/card';
     InicioRoutingModule,
     MatButtonModule,
     MatCardModule
+  ],
+  exports: [
+    MatButtonModule,
+    MatCardModule,
+    CardComponent,
+    CarrouselComponent
   ]
 })
 export class InicioModule { }
