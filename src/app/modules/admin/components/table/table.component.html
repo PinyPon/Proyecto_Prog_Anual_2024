@@ -89,6 +89,15 @@
                             <input class="form-control" type="text" formControlName="descripcion"
                                 placeholder="Ej.: Medias de chanchitos de algodón premium">
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Es una oferta:</label>
+                            <select class="form-control" formControlName="oferta" class="form-select">
+                                <option selected disabled>Elija una opción</option>
+                                <option value="Ramo Grande">Sí, es una oferta</option>
+                                <option value="Ramo Mediano">No, no es una oferta</option>
+                            </select>
+                        </div>
         
                         <div class="mb-3">
                             <label class="form-label">Ingrese el precio:</label>
@@ -158,6 +167,15 @@
                             <label class="form-label">Ingrese una descripción:</label>
                             <input class="form-control" type="text" formControlName="descripcion"
                                 placeholder="{{productoEdit.descripcion}}">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Es una oferta:</label>
+                            <select class="form-control" formControlName="oferta" class="form-select">
+                                <option selected disabled>Elija una opción</option>
+                                <option value="Ramo Grande">Sí, es una oferta</option>
+                                <option value="Ramo Mediano">No, no es una oferta</option>
+                            </select>
                         </div>
         
                         <div class="mb-3">

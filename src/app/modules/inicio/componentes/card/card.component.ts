@@ -34,7 +34,7 @@ export class CardComponent {
     idProducto: '', // -> inicializamos con comillas simples porque es tipo STRING
     nombre: '',
     descripcion: '',
-    oferta: '',
+    oferta: false,
     categoria: '',
     precio: 0,
     imagen: '',

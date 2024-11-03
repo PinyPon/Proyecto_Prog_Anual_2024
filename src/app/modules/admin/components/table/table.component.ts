@@ -32,7 +32,7 @@ export class TableComponent {
     nombre: new FormControl('', Validators.required),
     precio: new FormControl(0, Validators.required),
     descripcion: new FormControl('', Validators.required),
-    oferta: new FormControl('', Validators.required),
+    oferta: new FormControl(false),
     categoria: new FormControl('', Validators.required),
     // imagen: new FormControl('', Validators.required),
     alt: new FormControl('', Validators.required)

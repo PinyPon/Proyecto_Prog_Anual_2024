@@ -14,12 +14,14 @@ import { CarrouselComponent } from './componentes/carrousel/carrousel.component'
 // COMPONENTES DE MATERIAL
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { OfertasComponent } from './componentes/ofertas/ofertas.component';
 
 @NgModule({
   declarations: [
     InicioComponent,
     CardComponent,
     CarrouselComponent,
+    OfertasComponent,
 
   // FooterComponent
   ],

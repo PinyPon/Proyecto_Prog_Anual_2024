@@ -2,7 +2,7 @@ export interface Flores {
     id: string;
     nombre: string;
     description: string;
-    oferta: string;
+    oferta: boolean;
     precio: number;
     imagen: string;
     alt: string;
