@@ -32,6 +32,7 @@ export class TableComponent {
     nombre: new FormControl('', Validators.required),
     precio: new FormControl(0, Validators.required),
     descripcion: new FormControl('', Validators.required),
+    oferta: new FormControl('', Validators.required),
     categoria: new FormControl('', Validators.required),
     // imagen: new FormControl('', Validators.required),
     alt: new FormControl('', Validators.required)
@@ -55,6 +56,7 @@ export class TableComponent {
         nombre: this.producto.value.nombre!,
         precio: this.producto.value.precio!,
         descripcion: this.producto.value.descripcion!,
+        oferta: this.producto.value.oferta!,
         categoria: this.producto.value.categoria!,
         imagen: '',
         alt: this.producto.value.alt!
@@ -165,6 +167,7 @@ export class TableComponent {
       nombre: productoSeleccionado.nombre,
       precio: productoSeleccionado.precio,
       descripcion: productoSeleccionado.descripcion,
+      oferta: productoSeleccionado.oferta,
       categoria: productoSeleccionado.categoria,
       // imagen: productoSeleccionado.imagen,
       alt: productoSeleccionado.alt
@@ -181,6 +184,7 @@ export class TableComponent {
       nombre: this.producto.value.nombre!,
       precio: this.producto.value.precio!,
       descripcion: this.producto.value.descripcion!,
+      oferta: this.producto.value.oferta!,
       categoria: this.producto.value.categoria!,
       imagen: this.productoSeleccionado.imagen,
       alt: this.producto.value.alt!

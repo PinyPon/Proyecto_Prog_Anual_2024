@@ -7,7 +7,7 @@ import { PreguntasComponent } from './preguntas/preguntas.component';
 
 const routes: Routes = [
   {
-    path:"nosotros",component:NosotrosComponent
+    path:"nosotros",component: NosotrosComponent
   },
   {
     path: "preguntas", component: PreguntasComponent

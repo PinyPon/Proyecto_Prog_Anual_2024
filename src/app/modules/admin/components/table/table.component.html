@@ -30,13 +30,15 @@
             <tbody>
                 <tr *ngFor="let producto of coleccionProductos">
                     <th scope="row">1</th>
-        
-                    <td>
+
+                    <td data-label="Imagen">
                         <img src="{{producto.imagen}}" alt="{{producto.alt}}" width="100px">
                     </td>
+                    
                     <td>{{producto.nombre}}</td>
                     <td>{{producto.precio}}</td>
                     <td>{{producto.descripcion}}</td>
+                    <td>{{producto.oferta}}</td>
                     <td>{{producto.categoria}}</td>
         
                     <!-- ACCIONES -->

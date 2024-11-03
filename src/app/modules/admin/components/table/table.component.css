@@ -1,33 +1,39 @@
-body{
+body {
     display: flex;
     justify-content: center;
     margin-bottom: 3rem;
     background-color: antiquewhite;
 
 }
+
 .modal-footer {
     text-align: center;
     justify-content: center;
     font-family: serif;
 }
 
-table, td, tr, th {
+table,
+td,
+tr,
+th {
     background-color: antiquewhite;
     font-family: serif;
 }
 
 .table {
-    width: 100%; /* Asegura que la tabla use todo el ancho disponible */
+    width: 100%;
+    /* Asegura que la tabla use todo el ancho disponible */
 }
 
-b{
+b {
     font-size: x-large;
 }
 
 .estilo {
     background-color: antiquewhite;
     border-color: black;
-    padding: 20px; /* Espaciado interno */
+    padding: 20px;
+    /* Espaciado interno */
 }
 
 .botonA {
@@ -37,7 +43,7 @@ b{
     border-radius: 50rem;
 }
 
-.row{
+.row {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,7 +56,7 @@ b{
     padding-bottom: 2%;
 }
 
-.col-sm-6{
+.col-sm-6 {
     margin-top: 1rem;
     margin-bottom: 1rem;
     background-color: aliceblue;
@@ -70,3 +76,69 @@ BB9CC0
 Verde oscuro: A5B68D
 Verde claro: C1CFA1 
 */
+
+/* Responsividad: para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+    .table thead {
+        display: none; /* Oculta el encabezado en pantallas pequeñas */
+    }
+
+    /* Filas del cuerpo de la tabla en pantallas pequeñas */
+    .table tbody tr {
+        display: block; /* Cada fila es un bloque */
+        margin-bottom: 15px; /* Espacio entre filas */
+        border-bottom: 2px solid #dee2e6; /* Borde inferior para separar los productos */
+        padding: 10px 0; /* Espaciado extra */
+    }
+
+    /* Cada celda del cuerpo se mostrará como un bloque */
+    .table tbody td {
+        display: flex; /* Cada celda será un contenedor flexible */
+        justify-content: space-between; /* Alinea el contenido entre los extremos */
+        padding: 10px; /* Espaciado dentro de las celdas */
+        text-align: right; /* Alinea el texto a la derecha para mejorar legibilidad */
+    }
+
+    /* Títulos de los campos en pantallas pequeñas */
+    .table tbody td:before {
+        content: attr(data-label); /* Usa el atributo data-label para generar títulos */
+        font-weight: bold; /* Títulos en negrita */
+        text-transform: uppercase; /* Los títulos en mayúsculas */
+        color: #6c757d; /* Color gris para los títulos */
+        margin-right: 10px; /* Espacio entre el título y el contenido */
+        flex-basis: 40%; /* Los títulos ocupan el 40% del ancho */
+        text-align: left; /* Alinea los títulos a la izquierda */
+    }
+
+    /* Los botones en pantallas pequeñas se agrandan para ser más accesibles */
+    #btn-edit, #btn-delete {
+        padding: 8px 12px;
+        font-size: 1rem;
+    }
+
+    /* Ajusta las imágenes en pantallas pequeñas */
+    .table tbody img {
+        max-width: 80px; /* Reduce el tamaño máximo de las imágenes */
+    }
+}
+
+/* Responsividad: para pantallas muy pequeñas (móviles) */
+@media (max-width: 576px) {
+    /* Mayor espaciado y ajuste de contenido en móviles */
+    .table tbody td {
+        flex-direction: column; /* Cada celda se organiza en una columna */
+        text-align: left; /* Alinea el contenido a la izquierda */
+    }
+
+    .table tbody td:before {
+        margin-bottom: 5px; /* Espaciado extra entre título y contenido */
+    }
+
+    /* Botones más grandes y visibles en móviles */
+    #btn-edit, #btn-delete {
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        margin-bottom: 10px; /* Espaciado inferior entre botones */
+    }
+}
+
+

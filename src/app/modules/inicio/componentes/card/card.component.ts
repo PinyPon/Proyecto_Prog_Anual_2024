@@ -28,14 +28,36 @@ export class CardComponent {
       this.coleccionProductos = producto;
     })
   }
-  compra() {
+
+  // IMPORTAR LA INTERFAZ DE Flores -> INICIALIZAR
+  flor: Producto = {
+    idProducto: '', // -> inicializamos con comillas simples porque es tipo STRING
+    nombre: '',
+    descripcion: '',
+    oferta: '',
+    categoria: '',
+    precio: 0,
+    imagen: '',
+    alt: '' 
+  }
+
+  compra(producto: Producto) {
+    this.flor.nombre = producto.nombre
+    this.flor.descripcion = producto.descripcion
+    this.flor.oferta = producto.oferta
+    this.flor.precio = producto.precio
+    this.flor.imagen = producto.imagen
+    this.flor.alt = producto.alt
+
     Swal.fire({
-      title: "Sweet!",
-      text: "Modal with a custom image.",
-      imageUrl: "{{imagen.}}",
-      imageWidth: 400,
-      imageHeight: 200,
-      imageAlt: "Custom image"
+      titleText: this.flor.nombre,
+      title: this.flor.precio,
+      text: this.flor.descripcion,
+      imageUrl: this.flor.imagen,
+      imageWidth: 300,
+      imageAlt: this.flor.alt,
+      cancelButtonText: "cancelar"
+      
     });
   }
 }
