@@ -65,9 +65,9 @@ img{
 }
 
 .imagenVM{
-    width: 20rem;
+    width: 18rem;
     transform: translateX(-15%);
-    margin-top: -2rem;
+    border-radius: 100%;
 }
 
 .imagen {
@@ -117,3 +117,6 @@ img{
         opacity: 1;
     }
 }
+
+
+/* @media (max-widt) */

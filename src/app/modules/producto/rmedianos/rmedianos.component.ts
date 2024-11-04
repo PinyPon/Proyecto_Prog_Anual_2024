@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { Producto } from 'src/app/models/producto';
 import { CrudService } from '../../admin/services/crud.service';
 
+// Sweet alert
+import Swal from 'sweetalert2'
+
 @Component({
   selector: 'app-rmedianos',
   templateUrl: './rmedianos.component.html',
@@ -19,6 +22,13 @@ export class RmedianosComponent {
       this.coleccionProductos = producto.filter(producto => producto.categoria === 'Ramo Mediano');
 
     })
+  }
+  carrito(){
+    Swal.fire({
+      title: "Oops",
+      text: "Este boton no está listo todavía",
+      icon: "warning"
+    });
   }
 }
 

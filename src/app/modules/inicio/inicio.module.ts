@@ -35,7 +35,8 @@ import { OfertasComponent } from './componentes/ofertas/ofertas.component';
     MatButtonModule,
     MatCardModule,
     CardComponent,
-    CarrouselComponent
+    CarrouselComponent,
+    OfertasComponent
   ]
 })
 export class InicioModule { }

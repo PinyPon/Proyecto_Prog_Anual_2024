@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { Producto } from 'src/app/models/producto';
 import { CrudService } from '../../admin/services/crud.service';
 
+// Sweet alert
+import Swal from 'sweetalert2'
+
 @Component({
   selector: 'app-rgrandes',
   templateUrl: './rgrandes.component.html',
@@ -17,6 +20,13 @@ export class RgrandesComponent {
       this.coleccionProductos = producto.filter(producto => producto.categoria === 'Ramo Grande');
 
     })
+  }
+  carrito(){
+    Swal.fire({
+      title: "Oops",
+      text: "Este boton no está listo todavía",
+      icon: "warning"
+    });
   }
 }
 /*

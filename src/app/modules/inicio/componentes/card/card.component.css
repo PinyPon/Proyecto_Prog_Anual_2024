@@ -142,6 +142,7 @@ button {
 }
 
 .btn, .more{
+    display: block;
     justify-content: center;
     background-color: #A5B68D;
     /* Color de fondo del botón */

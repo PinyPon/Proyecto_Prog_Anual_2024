@@ -11,14 +11,8 @@
           </p>
         </mat-card-content>
         <mat-card-actions class="boton">
-          <button mat-button class="btn" (click)="compra(i)">Comprar</button>
-
-          <button mat-button class="btn" *ngIf="mostrarMas"><i class="bi bi-heart-fill"></i>
-            <div class="accordion-body">
-             <p>{{i.descripcion}}</p>
-            </div></button>
-
-          
+          <button mat-button class="btn" (click)="compra(i)">Ver mas</button>
+          <!-- <button mat-button class="btn">Añadir al carrito</button> -->
         </mat-card-actions>
       </mat-card>
     </div>

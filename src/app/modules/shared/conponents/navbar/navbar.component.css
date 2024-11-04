@@ -20,9 +20,15 @@ mat-toolbar{
 
 @media (min-width: 300px) and (max-width: 700px) {
   
+.menu{
+  width: 50px;
+}
+
+
   mat-toolbar {
 background: -webkit-linear-gradient(to top, #EDE8DC, #E7CCCC);
 background: linear-gradient(to bottom, #EDE8DC, #E7CCCC);
+
 }
 
 /* 
@@ -56,6 +62,10 @@ Verde claro: C1CFA1
 @media (min-width: 700px) {
   mat-toolbar {
     background:  #E7CCCC;
+  }
+
+  .menu{
+    width: 50px;
   }
 
   #menuSelecciones {

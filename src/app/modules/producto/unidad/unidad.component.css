@@ -127,11 +127,11 @@ p {
     justify-content: center;
 }
 
-.bi-heart-fill{
+.bi-cart-fill{
     color: #EDE8DC;
 }
 
-.bi-heart-fill:hover{
+.bi-cart-fill:hover{
     color: crimson;
 }
 
@@ -139,6 +139,7 @@ p {
 .btn {
     display: flex;
     justify-content: center;
+    width: 100%;
     background-color: #A5B68D;
     /* Color de fondo del botón */
     color: #fff;

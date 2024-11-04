@@ -22,9 +22,9 @@ export class OfertasComponent {
   constructor(public servicioCrud: CrudService) { }
 
   ngOnInit(): void {
-    this.servicioCrud.obtenerProducto().subscribe(producto => {
-      this.coleccionProductos = producto.filter(producto => producto.oferta === true);
-    })
+    this.servicioCrud.obtenerProducto().subscribe(productos => {
+      this.coleccionProductos = productos.filter(producto => producto.oferta);
+    });
   }
 }
 /*

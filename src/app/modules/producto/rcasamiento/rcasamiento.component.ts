@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { Producto } from 'src/app/models/producto';
 import { CrudService } from '../../admin/services/crud.service';
 
+// Sweet alert
+import Swal from 'sweetalert2'
+
 @Component({
   selector: 'app-rcasamiento',
   templateUrl: './rcasamiento.component.html',
@@ -20,5 +23,12 @@ export class RcasamientoComponent {
       this.coleccionProductos = producto.filter(producto => producto.categoria === 'Ramo Casamiento');
 
     })
+  }
+  carrito(){
+    Swal.fire({
+      title: "Oops",
+      text: "Este boton no está listo todavía",
+      icon: "warning"
+    });
   }
 }

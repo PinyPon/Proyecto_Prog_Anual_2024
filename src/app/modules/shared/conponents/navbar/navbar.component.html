@@ -25,7 +25,7 @@
         <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
           Menú
         </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close menu" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <button mat-menu-item routerLink="/inicio" class="bounce-in-left">Inicio</button>
@@ -46,7 +46,7 @@
       <span class="example-spacer"></span>
 
       <!-- Menú desplegable para manejar todo el acceso de los usuarios en la página -->
-      <button mat-icon-button [matMenuTriggerFor]="usuario"><mat-icon>person</mat-icon></button>
+      <button  mat-icon-button [matMenuTriggerFor]="usuario"><mat-icon>person</mat-icon></button>
       <mat-menu class="selector" #usuario="matMenu">
           <button class="tipografia" mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/registro">Registrarse</button>
           <button class="tipografia" mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/inicio-sesion">Iniciar Sesión</button>
