@@ -3,20 +3,20 @@
    
 
     <div class="tarjetas">
-        <div *ngFor="let i of coleccionProductos" class="contenido">
-          <mat-card class="example-card">
-            <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" class="card-img-top">
-            <mat-card-content>
-              <p class="card-title">
-                {{i.categoria}}
-                <br>
-                Precio: ${{i.precio}}
-              </p>
-            </mat-card-content>
-            <mat-card-actions class="boton">
-              <button mat-button class="btn" (click)="carrito()"><i class="bi bi-cart4"></i></button>
-            </mat-card-actions>
-          </mat-card>
-        </div>
+      <div *ngFor="let i of coleccionProductos" class="contenido">
+        <mat-card class="example-card">
+          <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" class="card-img-top">
+          <mat-card-content>
+            <p class="card-title">
+              {{i.nombre}}
+              <br>
+              Precio: ${{i.precio}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions class="boton">
+            <button mat-button class="btn" (click)="carrito()"><i class="bi bi-cart-fill"></i></button>
+          </mat-card-actions>
+        </mat-card>
       </div>
+    </div>
   </body>

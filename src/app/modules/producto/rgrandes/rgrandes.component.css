@@ -127,18 +127,19 @@ p {
     justify-content: center;
 }
 
-.bi-heart-fill{
+
+.bi-cart-fill{
     color: #EDE8DC;
 }
 
-.bi-heart-fill:hover{
+.bi-cart-fill:hover{
     color: crimson;
 }
-
 
 .btn {
     display: flex;
     justify-content: center;
+    width: 100%;
     background-color: #A5B68D;
     /* Color de fondo del botón */
     color: #fff;
@@ -152,6 +153,7 @@ p {
     transition: background-color 0.3s ease;
     /* Transición suave del color de fondo */
 }
+
 
 /* Estilos para hacer las tarjetas responsivas */
 @media (max-width: 768px) {

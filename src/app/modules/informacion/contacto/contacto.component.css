@@ -1,0 +1,16 @@
+body{
+    background-color: #E0E5B6;
+    font-family: serif;
+}
+
+.mapa{
+    width: 85%;
+    border-radius: 100%;
+}
+
+h1{
+    background-color: #E0E5B6;
+    font-family: serif;
+    display: flex;
+    justify-content: center;
+}
