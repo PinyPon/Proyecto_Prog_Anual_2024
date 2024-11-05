@@ -1,7 +1,118 @@
-body{
-    background-color: #E0E5B6;
+
+
+
+  body{
+    background: -webkit-linear-gradient(to top, #EDE8DC, #C1CFA1, #A5B68D);
+    background: linear-gradient(to bottom, #EDE8DC, #C1CFA1, #A5B68D);
     font-family: serif;
+    padding-top: 15px;
+} 
+
+.formulario{
+    font-family: serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+form{
+    width: 100%;
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 340px;
+    background: -webkit-linear-gradient(to top, #FEFAE0,  #E7CCCC, #e4bdbd);
+    background: linear-gradient(to bottom, #FEFAE0, #E7CCCC, #e4bdbd);
+    background-color: #E7CCCC;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-radius: 100%;
+}
+
+h1{
+    color: black;
+    font-size: 3;
+}
+
+label{
+    color: black;
+    font-size: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    border-radius: 100%;
+}
+
+.estilos{
+    border-radius: 200px;
+}
+
+input, textarea{
+    width: 100%;
+    padding: 17px 25px;
+    margin-bottom: 20px;
+    background-color: #E0E5B6;
+    border: 2px solid #e4bdbd;
+    color: #A5B68D;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder{
+    color: #A5B68D;
+}
+
+.form-txt{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 200px;
+}
+
+.form-txt a {
+    color: #A5B68D;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn{
+    font-size: 16px;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 25px;
+    background-color: black;
+    box-shadow: 0 0 20px #A5B68D;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: black;
+}
+
+@media(max-width: 700px){
+    .formulario{
+        padding: 30px;
+    }
+
+    form{
+        padding: 50px 30px;
+        width: 100%;
+    }
+
+    input{
+        padding: 15px;
+    }
+}
+
+
+
+
 
 .mapa{
     width: 85%;
@@ -9,8 +120,8 @@ body{
 }
 
 h1{
-    background-color: #E0E5B6;
+    text-align: center;
+    padding: 5px;
     font-family: serif;
-    display: flex;
-    justify-content: center;
+    border-radius: 50rem;
 }
