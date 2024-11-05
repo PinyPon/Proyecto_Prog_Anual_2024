@@ -8,7 +8,14 @@
     padding-top: 15px;
 } 
 
+
+
+
+
+
+/*ESTILOS PARA FORM CONTACTO*/
 .formulario{
+    width: 100%;
     font-family: serif;
     min-height: 100vh;
     display: flex;
@@ -17,40 +24,95 @@
 }
 
 form{
-    width: 100%;
-    padding: 50px 55px;
+    background-color: #ffffff;
+    padding: 25px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
-    border-radius: 20px;
+    border-radius: 15px;
     text-align: center;
-    width: 340px;
+    width: 450px;
     background: -webkit-linear-gradient(to top, #FEFAE0,  #E7CCCC, #e4bdbd);
     background: linear-gradient(to bottom, #FEFAE0, #E7CCCC, #e4bdbd);
-    background-color: #E7CCCC;
 }
 
 .input-group{
     display: flex;
     flex-direction: column;
     text-align: left;
-    border-radius: 100%;
 }
 
 h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10;
     color: black;
-    font-size: 3;
+    margin-bottom: 30px;
+    margin-top: 10px;
 }
+
 
 label{
-    color: black;
-    font-size: 15px;
-    margin-bottom: 15px;
-    border-radius: 15px;
-    border-radius: 100%;
+    color: #242424;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 
-.estilos{
-    border-radius: 200px;
+input, textarea{
+    width: 100%;
+    padding: 17px 25px;
+    margin-bottom: 20px;
+    background-color: rgb(240, 239, 238);
+    border: 2px solid rgb(240, 239, 238);
+    border-radius: 20px;
+    color: #727272;
+    outline: none;
 }
+
+input::placeholder, textarea::placeholder{
+    color: #727272;
+}
+
+.form-txt{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.form-txt a {
+    color: #47382c;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn{
+    font-size: 15px;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 25px;
+    background-color: #423125;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #E0E5B6;
+}
+
+@media(max-width: 700px){
+    form{
+        padding: 15px;
+        width: 100%;
+    }
+    input{
+        padding: 15px;
+    }
+}
+
+
+
+
+
+/* 
 
 input, textarea{
     width: 100%;
@@ -110,13 +172,11 @@ input::placeholder, textarea::placeholder{
     }
 }
 
-
-
-
+ */
 
 .mapa{
-    width: 85%;
-    border-radius: 100%;
+    width: 100%;
+    border-radius: 90%;
 }
 
 h1{
