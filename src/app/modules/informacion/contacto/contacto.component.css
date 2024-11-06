@@ -1,17 +1,9 @@
-
-
-
-  body{
+body{
     background: -webkit-linear-gradient(to top, #EDE8DC, #C1CFA1, #A5B68D);
     background: linear-gradient(to bottom, #EDE8DC, #C1CFA1, #A5B68D);
     font-family: serif;
     padding-top: 15px;
 } 
-
-
-
-
-
 
 /*ESTILOS PARA FORM CONTACTO*/
 .formulario{
@@ -21,6 +13,29 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.redes1{
+    margin-top: 2rem;
+}
+
+.redes2{
+    margin-top: 0.5rem;
+}
+
+button{
+    width: 4rem;
+    height: 4rem;
+    background-color: #E7CCCC;
+    border: none;
+    margin-left: 1rem;
+    border-radius: 25px;
+    transition: transform 0.9seg;
+}
+
+button:hover{
+    transform: scale(1.15);
+    background: #e4bdbd;
 }
 
 form{
@@ -108,75 +123,9 @@ input::placeholder, textarea::placeholder{
     }
 }
 
-
-
-
-
-/* 
-
-input, textarea{
-    width: 100%;
-    padding: 17px 25px;
-    margin-bottom: 20px;
-    background-color: #E0E5B6;
-    border: 2px solid #e4bdbd;
-    color: #A5B68D;
-    outline: none;
-}
-
-input::placeholder, textarea::placeholder{
-    color: #A5B68D;
-}
-
-.form-txt{
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    border-radius: 200px;
-}
-
-.form-txt a {
-    color: #A5B68D;
-    font-size: 14px;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.btn{
-    font-size: 16px;
-    color: #FFFFFF;
-    border: 0;
-    border-radius: 25px;
-    background-color: black;
-    box-shadow: 0 0 20px #A5B68D;
-    cursor: pointer;
-}
-
-.btn:hover{
-    background-color: black;
-}
-
-@media(max-width: 700px){
-    .formulario{
-        padding: 30px;
-    }
-
-    form{
-        padding: 50px 30px;
-        width: 100%;
-    }
-
-    input{
-        padding: 15px;
-    }
-}
-
- */
-
 .mapa{
     width: 100%;
-    border-radius: 90%;
+    border-radius: 100%;
 }
 
 h1{
