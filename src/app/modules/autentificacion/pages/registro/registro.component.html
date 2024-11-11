@@ -24,14 +24,6 @@
                 <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: pepitoperez2022@gmail.com" required>
             </mat-form-field>
 
-            <mat-form-field>
-                <mat-label>Rol</mat-label>
-                <select type="text" [(ngModel)]="usuarios.rol" [ngModelOptions]="{standalone: true}"  matNativeControl required>
-                  <option value="admin">Administrador</option>
-                  <option value="visit">Visitante</option>
-                  </select>
-              </mat-form-field>
-
             <!-- Contraseña de usuario -->
             <mat-form-field>
                 <mat-label>Ingrese su contraseña:</mat-label>
