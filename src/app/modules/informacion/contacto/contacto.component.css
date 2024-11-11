@@ -55,12 +55,19 @@ form{
     text-align: left;
 }
 
+.titulo{
+    
+    background-color: cornsilk;
+}
+
 h1{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10;
     color: black;
     margin-bottom: 30px;
     margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 
@@ -122,6 +129,27 @@ input::placeholder, textarea::placeholder{
         padding: 15px;
     }
 }
+
+/* Media query para pantallas de entre 300px y 700px */
+@media (min-width: 300px) and (max-width: 700px) {
+    .container {
+      padding: 0; /* Ajustar el padding para pantallas pequeñas */
+    }
+  
+    .row {
+      flex-direction: column; /* Cambiar la dirección de las columnas para que se apilen verticalmente */
+    }
+  
+    .col {
+      width: 100%; /* Asegurarse de que las columnas ocupen todo el ancho disponible */
+      margin-bottom: 20px; /* Agregar espacio entre las secciones */
+    }
+  
+    .mapa iframe {
+      width: 100%; /* El mapa ocupa el 100% del ancho de su contenedor */
+      height: 260px; /* Ajustar la altura para que se vea bien */
+    }
+  }
 
 .mapa{
     width: 100%;
