@@ -19,14 +19,24 @@
     background-color: #E7CCCC;
 }
 
-.video{
+.video{    
+    border-radius: 50px;
     display: flex;
     justify-content: center;
 }
 
-.carousel-item{
-    
+.V{
     justify-content: center;
     align-items: center;
     width: 300px;
 }
+
+video{
+    border-radius: 70px;
+}
+
+@media (min-width: 300px) and (max-width: 700px) {
+    .video {
+      display: none; /* Ocultar video en este rango de pantallas */
+    }
+  }
