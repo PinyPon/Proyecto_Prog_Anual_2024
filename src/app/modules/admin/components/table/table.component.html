@@ -20,6 +20,7 @@
                     <th scope="col">Precio</th>
                     <th scope="col">Descripción</th>
                     <th scope="col">Categoría</th>
+                    <th scope="col">Stock</th>
                     <th scope="col">Acciones</th>
                 </tr>
             </thead>
@@ -40,6 +41,7 @@
                     <td>{{producto.descripcion}}</td>
                     <td>{{producto.oferta}}</td>
                     <td>{{producto.categoria}}</td>
+                    <td>{{producto.stock}}</td>
         
                     <!-- ACCIONES -->
                     <td>
@@ -94,14 +96,14 @@
                             <label class="form-label">Es una oferta:</label>
                             <select class="form-control" formControlName="oferta" class="form-select">
                                 <option selected disabled>Elija una opción</option>
-                                <option value="Ramo Grande">Sí, es una oferta</option>
-                                <option value="Ramo Mediano">No, no es una oferta</option>
+                                <option value="true">Sí, es una oferta</option>
+                                <option value="false">No, no es una oferta</option>
                             </select>
                         </div>
         
                         <div class="mb-3">
                             <label class="form-label">Ingrese el precio:</label>
-                            <input class="form-control" type="number" formControlName="precio" placeholder="...">
+                            <input class="form-control" type="number" formControlName="precio" placeholder="$...">
                         </div>
         
                         <div class="mb-3">
@@ -131,7 +133,14 @@
                         <div class="mb-3">
                             <label class="form-label">Ingrese texto alternativo de la imagen:</label>
                             <input class="form-control" type="text" formControlName="alt"
-                                placeholder="Ej.: Medias de chanchito">
+                                placeholder="Ej.: Ramo de frecias">
+                        </div>
+
+                        <!-- Stock -->
+                        <div class="mb-3">
+                            <label class="form-label">Ingrese el stock del producto</label>
+                            <input class="form-control" type="number" formControlName="stock"
+                                placeholder="Ej.: 25">
                         </div>
                     </div>
         
@@ -206,6 +215,13 @@
                             <input class="form-control" type="text" formControlName="alt"
                                 placeholder="{{productoEdit.alt}}">
                         </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Ingrese el stock del producto</label>
+                            <input class="form-control" type="number" formControlName="stock"
+                                placeholder="{{productoEdit.stock}}">
+                        </div>
+
                     </div>
         
                     <!-- ACCIONES DEL MODAL -->

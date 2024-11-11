@@ -42,7 +42,8 @@ export class CardComponent {
     categoria: '',
     precio: 0,
     imagen: '',
-    alt: '' 
+    alt: '',
+    stock: 0
   }
 
   compra(producto: Producto) {
@@ -52,6 +53,7 @@ export class CardComponent {
     this.flor.precio = producto.precio
     this.flor.imagen = producto.imagen
     this.flor.alt = producto.alt
+    this.flor.stock = producto.stock
 
     Swal.fire({
       titleText: this.flor.nombre,
