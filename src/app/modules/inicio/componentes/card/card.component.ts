@@ -15,6 +15,10 @@ import Swal from 'sweetalert2'
 })
 export class CardComponent {
   coleccionProductos: Producto[] = [];
+  
+  coleccionOfertas: Producto[] = [];
+
+  coleccionGeneral: Producto[] = [];
 
   mostrarMas: boolean = false;
 
@@ -60,5 +64,16 @@ export class CardComponent {
       
     });
   }
+
+  filtroProductos(){
+    this.coleccionProductos.forEach(producto =>{
+      if(producto.oferta === true){
+        this.coleccionOfertas.push(producto);
+      }else{
+        this.coleccionGeneral.push(producto);
+      }
+    })
+  }
 }
+ 
 

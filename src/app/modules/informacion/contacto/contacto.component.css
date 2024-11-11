@@ -126,6 +126,12 @@ input::placeholder, textarea::placeholder{
 .mapa{
     width: 100%;
     border-radius: 100%;
+
+}
+
+iframe{
+    
+    border: solid 2px #e4bdbd;
 }
 
 h1{
