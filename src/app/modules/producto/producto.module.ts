@@ -7,7 +7,7 @@ import { RmedianosComponent } from './rmedianos/rmedianos.component';
 import { RcasamientoComponent } from './rcasamiento/rcasamiento.component';
 import { UnidadComponent } from './unidad/unidad.component';
 import {MatCardModule} from '@angular/material/card';
-import { FormsModule,  } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule,  } from '@angular/forms';
 
 
 
@@ -22,7 +22,9 @@ import { FormsModule,  } from '@angular/forms';
     CommonModule,
     ProductoRoutingModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     MatCardModule,

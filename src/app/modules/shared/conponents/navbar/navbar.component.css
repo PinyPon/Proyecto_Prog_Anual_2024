@@ -82,3 +82,12 @@ Verde claro: C1CFA1
 #menuInicio{
   border-radius: 200rem;
 }
+
+/* Ejemplo de estilo para los botones */
+button.mat-menu-item {
+  transition: transform 0.3s ease;
+}
+
+button.mat-menu-item:hover {
+  transform: scale(1.05);
+}

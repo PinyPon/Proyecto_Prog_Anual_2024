@@ -13,9 +13,14 @@
               <br>
               Precio: ${{i.precio}}
             </p>
+            <br>
+            <div class="mb-3">
+              {{i.stock}}
+            </div>
           </mat-card-content>
           <mat-card-actions class="boton">
-            <button mat-button class="btn" (click)="carrito()"><i class="bi bi-cart-fill"></i></button>
+            <input type="button" placeholder="cantidad deseada" [(ngModel)]="stock">
+            <button mat-button class="btn" (click)="agregarProducto(i)"><i class="bi bi-cart-fill"></i></button>
           </mat-card-actions>
         </mat-card>
       </div>

@@ -4,6 +4,7 @@ import { CrudService } from '../../admin/services/crud.service';
 
 // Sweet alert
 import Swal from 'sweetalert2'
+import { CarritoService } from '../../carrito/services/carrito.service';
 
 @Component({
   selector: 'app-rgrandes',
@@ -13,7 +14,12 @@ import Swal from 'sweetalert2'
 export class RgrandesComponent {
   coleccionProductos: Producto[] = [];
 
-  constructor(public servicioCrud: CrudService) { }
+  stock : number = 0;
+
+  constructor(
+    public servicioCrud: CrudService,
+    public servicioCarrito: CarritoService
+  ) { }
 
   ngOnInit(): void {
     this.servicioCrud.obtenerProducto().subscribe(producto => {
@@ -27,6 +33,19 @@ export class RgrandesComponent {
       text: "Este boton no está listo todavía",
       icon: "warning"
     });
+  }
+
+  agregarProducto(info : Producto){
+    const stockDeseado = Math.trunc(this.stock);
+    if (stockDeseado<=0 || stockDeseado > info.stock) {
+      Swal.fire({
+        title:'Error',
+        text:'No hay tanto estock',
+        icon: 'error'
+      })
+    } else {
+      this.servicioCarrito.crearPedido(info, stockDeseado);
+    }
   }
 }
 /*

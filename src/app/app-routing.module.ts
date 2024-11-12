@@ -21,12 +21,15 @@ const routes: Routes = [
     path:"",loadChildren:()=>import('./modules/autentificacion/autentificacion.module').then(m=>m.AutentificacionModule)
   },
   {
+    path: "", loadChildren:()=>import('./modules/carrito/carrito.module').then(m=>m.CarritoModule)
+  },
+  {
     path: "", loadChildren:()=>import('./modules/informacion/informacion.module').then(m=>m.InformacionModule)
   },
   {
     path:"",loadChildren:()=>import('./modules/admin/admin.module').then(m=>m.AdminModule),
          // Definimos al guardian que proteja la ruta de Admin y que espere un rol de tipo "admin"
-        //canActivate: [ rutaProtegidaGuard ], data: { role: 'admin' }
+        canActivate: [ rutaProtegidaGuard ], data: { role: 'admin' }
   },
   
 ];

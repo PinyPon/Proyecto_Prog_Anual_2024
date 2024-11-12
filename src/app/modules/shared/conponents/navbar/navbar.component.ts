@@ -5,6 +5,7 @@ import {Router} from '@angular/router';
 // Sweet alert
 import Swal from 'sweetalert2'
 
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-navbar',
@@ -41,6 +42,12 @@ export class NavbarComponent {
       text: "Este boton no está listo todavía",
       icon: "warning"
     });
+  }
+
+  closeOffcanvas() {
+    const offcanvasElement = document.querySelector('.offcanvas');
+    const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvasElement);
+    offcanvasInstance.hide();
   }
 
 }
