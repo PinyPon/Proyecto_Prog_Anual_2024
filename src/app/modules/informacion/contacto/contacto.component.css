@@ -56,20 +56,18 @@ form{
 }
 
 .titulo{
-    
-    background-color: cornsilk;
+    background-color: rgb(248, 255, 233);
 }
 
 h1{
-    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 5px;
+    font-family: serif;
     font-size: 10;
     color: black;
     margin-bottom: 30px;
     margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
 }
-
 
 label{
     color: #242424;
@@ -160,11 +158,4 @@ input::placeholder, textarea::placeholder{
 iframe{
     
     border: solid 2px #e4bdbd;
-}
-
-h1{
-    text-align: center;
-    padding: 5px;
-    font-family: serif;
-    border-radius: 50rem;
 }

@@ -167,3 +167,20 @@ p {
         /* Ancho completo menos el espacio entre tarjetas */
     }
 }
+
+.etiqueta{
+    padding-top: 2rem;
+}
+
+.titulo{
+    background-color: rgb(248, 255, 233);
+}
+
+h1{
+    text-align: center;
+    padding: 5px;
+    font-family: serif;
+    font-size: 10;
+    color: black;
+    margin-bottom: 30px;
+}

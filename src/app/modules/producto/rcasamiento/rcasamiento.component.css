@@ -1,7 +1,10 @@
 body {
     background: -webkit-linear-gradient(to top, #EDE8DC, #C1CFA1, #A5B68D);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #EDE8DC, #C1CFA1, #A5B68D);
+}
+
+.etiqueta{
+    padding-top: 2rem;
 }
 
 .example-card {
@@ -28,9 +31,7 @@ Rosa: E7CCCC
 Verde oscuro: A5B68D
 Verde claro: C1CFA1 
 */
-.titulo {
-    margin-top: 1rem;
-}
+
 
 .example-card:hover {
     transform: scale(1.05);
@@ -40,9 +41,6 @@ Verde claro: C1CFA1
     cursor: pointer;
 }
 
-h1 {
-    text-align: center;
-}
 
 .contenido {
     width: 200px;
@@ -166,4 +164,18 @@ p {
         width: calc(100% - 20px);
         /* Ancho completo menos el espacio entre tarjetas */
     }
+}
+
+
+.titulo{
+    background-color: rgb(248, 255, 233);
+}
+
+h1{
+    text-align: center;
+    padding: 5px;
+    font-family: serif;
+    font-size: 10;
+    color: black;
+    margin-bottom: 30px;
 }
