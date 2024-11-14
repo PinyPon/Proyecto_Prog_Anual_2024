@@ -15,6 +15,8 @@ import Swal from 'sweetalert2'
 })
 export class CardComponent {
   coleccionProductos: Producto[] = [];
+
+  coleccionFiltrada: Producto[] = [];   // Colección filtrada (sin los productos de la categoría "oferta")
   
   coleccionOfertas: Producto[] = [];
 
@@ -26,13 +28,12 @@ export class CardComponent {
 
   ngOnInit(): void {
     // subscribe -> método de notificación de cambios (observable)
-    this.servicioCrud.obtenerProducto().subscribe(producto => {
-
-      // Filtro para que solo las card se cierta categoria se muestren en esta pagina
-      this.coleccionProductos = producto;
-    })
+    this.servicioCrud.obtenerProducto().subscribe(productos => {
+      // Filtramos los productos para excluir los que estén en la categoría "ofertas"
+      this.coleccionProductos = productos;
+      this.filtrarProductos();
+    });
   }
-
   // IMPORTAR LA INTERFAZ DE Flores -> INICIALIZAR
   flor: Producto = {
     idProducto: '', // -> inicializamos con comillas simples porque es tipo STRING
@@ -67,15 +68,12 @@ export class CardComponent {
     });
   }
 
-  filtroProductos(){
-    this.coleccionProductos.forEach(producto =>{
-      if(producto.oferta === true){
-        this.coleccionOfertas.push(producto);
-      }else{
-        this.coleccionGeneral.push(producto);
-      }
-    })
+  
+  // Filtrar los productos que no pertenezcan a la categoría "ofertas"
+  filtrarProductos() {
+    this.coleccionFiltrada = this.coleccionProductos.filter(producto => !producto.oferta);
   }
 }
+
  
 
