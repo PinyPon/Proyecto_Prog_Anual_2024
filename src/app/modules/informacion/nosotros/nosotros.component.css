@@ -162,7 +162,7 @@ body {
     justify-content: center;
   }
 
-  .imag, .imagen, .imagenVM{
+  .imag, .imagen, .imagenVM, .iv{
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -174,9 +174,9 @@ body {
     width: 100%;
   }
 
+  .valor{
+    text-align: center;
+    width: 100%;
+  }
+  
 }
-
-
-
-
-
