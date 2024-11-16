@@ -22,9 +22,17 @@ export class OfertasComponent {
   constructor(public servicioCrud: CrudService) { }
 
   ngOnInit(): void {
+    /*console.log("En este instante el componente ofertas ha cargado");
+    alert ("En este instante el componente ofertas ha cargado");*/
+       
     this.servicioCrud.obtenerProducto().subscribe(productos => {
       this.coleccionProductos = productos.filter(producto => producto.oferta);
+
+      //alert("002");
+      //console.log(productos.filter(producto => producto.oferta));
+
     });
+   
   }
 }
 /*

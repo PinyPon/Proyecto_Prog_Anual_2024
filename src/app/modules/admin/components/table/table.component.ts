@@ -12,6 +12,20 @@ import Swal from 'sweetalert2';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent {
+
+// Definimos la interfaz
+productos: Producto = {
+  idProducto: '',
+  nombre: '',
+  precio: 0,
+  descripcion: '',
+  oferta: false,
+  categoria: '',
+  imagen: '',
+  alt: '',
+  stock: 0,
+}
+
   // Creamos colección local de productos -> la definimos como array
   coleccionProductos: Producto[] = [];
 
@@ -28,7 +42,7 @@ export class TableComponent {
    * Atributos alfanuméricos (string) se inicializan con comillas simples
    * Atributos numéricos (number) se inicializan con cero ('0')
    */
-  producto = new FormGroup({
+    producto = new FormGroup({
     nombre: new FormControl('', Validators.required),
     precio: new FormControl(0, Validators.required),
     descripcion: new FormControl('', Validators.required),
@@ -45,7 +59,6 @@ export class TableComponent {
     // subscribe -> método de notificación de cambios (observable)
     this.servicioCrud.obtenerProducto().subscribe(producto => {
       this.coleccionProductos = producto;
-
     })
   }
 
@@ -63,7 +76,10 @@ export class TableComponent {
         alt: this.producto.value.alt!,
         stock: this.producto.value.stock!
       }
-
+      alert("NuevoProducto.oferta: " + nuevoProducto.oferta);
+      console.log("NuevoProducto.oferta: " + nuevoProducto.oferta);
+      
+      
       // Enviamos nombre y url de la imagen; definimos carpeta de imágenes como "productos"
       await this.servicioCrud.subirImagen(this.nombreImagen, this.imagen, "productos")
         .then(resp => {
@@ -89,6 +105,7 @@ export class TableComponent {
                     text: "No pudimos guardar tu producto",
                   });
                 })
+                this.limpiarInputs();
             })
         })
     }
@@ -146,13 +163,17 @@ export class TableComponent {
           text: "Producto eliminado!",
           icon: "success"
         });
+        this.limpiarInputs();
       })
+
       .catch(error => {
         Swal.fire({
           icon: "error",
           title: "Oops...",
           text: "No pudimos guardar tu producto",
         });
+        
+      this.limpiarInputs();
       })
   }
 
@@ -204,6 +225,8 @@ export class TableComponent {
 
               this.actualizarProducto(datos); // Actualizamos los datos
 
+              
+              this.limpiarInputs();
               this.producto.reset(); // Vaciar las casillas del formulario
             })
             .catch(error => {
@@ -214,6 +237,8 @@ export class TableComponent {
               });
 
               this.producto.reset();
+              
+      this.limpiarInputs();
             })
         })
     } else {
@@ -222,6 +247,20 @@ export class TableComponent {
         modificar la imagen ya existente en Firestore y en Storage
       */
       this.actualizarProducto(datos);
+      /*this.coleccionProductos.ngOnInit();*/ 
+    }
+  }
+
+  limpiarInputs() {
+    const inputs = {
+      nombre: this.productos.nombre = ' ',
+      precio: this.productos.precio = 0,
+      descripcion: this.productos.descripcion = ' ',
+      oferta: this.productos.oferta = false,
+      categoria: this.productos.categoria = ' ',
+      imagen: '',
+      alt: this.productos.alt = ' ',
+      stock: this.productos.stock = 0
     }
   }
 
@@ -234,6 +273,8 @@ export class TableComponent {
           text: "El producto se ha modificado con éxito.",
           icon: "success"
         });
+        
+      this.limpiarInputs();
       })
       .catch(error => {
         Swal.fire({
@@ -241,6 +282,8 @@ export class TableComponent {
           title: "Oops...",
           text: "Hubo un problema al modificar el producto: \n" + error,
         });
+        
+      this.limpiarInputs();
       })
   }
 }

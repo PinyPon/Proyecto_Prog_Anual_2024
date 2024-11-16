@@ -19,6 +19,7 @@
                     <th scope="col">Nombre</th>
                     <th scope="col">Precio</th>
                     <th scope="col">Descripción</th>
+                    <th scope="col">Ofertas</th>
                     <th scope="col">Categoría</th>
                     <th scope="col">Stock</th>
                     <th scope="col">Acciones</th>
@@ -96,8 +97,8 @@
                             <label class="form-label">Es una oferta:</label>
                             <select class="form-control" formControlName="oferta" class="form-select">
                                 <option selected disabled>Elija una opción</option>
-                                <option value="true">Sí, es una oferta</option>
-                                <option value="false">No, no es una oferta</option>
+                                <option value= true>Sí, es una oferta</option>
+                                <option value= false>No, no es una oferta</option>
                             </select>
                         </div>
         
@@ -179,17 +180,17 @@
                         </div>
 
                         <div class="mb-3">
+                            <label class="form-label">Ingrese el precio:</label>
+                            <input class="form-control" type="number" formControlName="precio" placeholder="{{productoEdit.precio}}">
+                        </div>
+
+                        <div class="mb-3">
                             <label class="form-label">Es una oferta:</label>
                             <select class="form-control" formControlName="oferta" class="form-select">
                                 <option selected disabled>Elija una opción</option>
-                                <option value="true">Sí, es una oferta</option>
-                                <option value="false">No, no es una oferta</option>
+                                <option value= true>Sí, es una oferta</option>
+                                <option value= false>No, no es una oferta</option>
                             </select>
-                        </div>
-        
-                        <div class="mb-3">
-                            <label class="form-label">Ingrese el precio:</label>
-                            <input class="form-control" type="number" formControlName="precio" placeholder="{{productoEdit.precio}}">
                         </div>
         
                         <div class="mb-3">
