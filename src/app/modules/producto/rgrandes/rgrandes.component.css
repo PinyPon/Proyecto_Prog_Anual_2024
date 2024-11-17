@@ -190,3 +190,12 @@ h1{
 input{
     width: 100%;
 }
+
+
+.boton{
+    margin-bottom: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+}
