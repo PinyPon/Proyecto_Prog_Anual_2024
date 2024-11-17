@@ -6,3 +6,18 @@ body { margin: 0; font-family: safira march; }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: serif;}
+
+.titulo{
+    /* Tamaño predeterminado para el titulo*/
+    height: 2rem;
+}
+
+.descripcion{
+    /* Tamaño predeterminado para la descripción*/
+    height: 7rem;
+}
+
+.precio{
+    /* Tamaño predeterminado para el precio*/
+    height: 2.5rem;
+}

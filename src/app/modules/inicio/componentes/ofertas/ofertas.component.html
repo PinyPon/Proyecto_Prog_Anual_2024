@@ -3,15 +3,18 @@
     <div *ngFor="let i of coleccionProductos" class="contenido">
       <div class="example-card">
         <img [src]="i.imagen" [alt]="i.alt" class="card-img-top">
-        <h3 class="card-title">{{ i.nombre }}</h3>
-        <p>{{ i.descripcion }}</p>
-        <p>Precio: {{ i.precio | currency }}</p>
+        <div class="titulo">
+          <h3 class="card-title">{{ i.nombre }}</h3>
+        </div>
+        <div class="descripcion">
+          <p>{{ i.descripcion }}</p>
+        </div>
+        <div class="precio">
+          <p>Precio: {{ i.precio | currency }}</p></div>
         <mat-card-actions class="boton">
-          <button mat-button class="btn" >Ver mas</button>
-          <!-- <button mat-button class="btn">Añadir al carrito</button> -->
+          <button mat-button class="btn" (click)="agregarProducto(i)"><i class="bi bi-cart-fill"></i></button>
+           <!--<button mat-button class="btn">Añadir al carrito</button> -->
         </mat-card-actions>
     </div>
   </div>
 </div>
-  
-  

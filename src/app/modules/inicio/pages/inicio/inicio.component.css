@@ -3,12 +3,6 @@
     background: linear-gradient(to bottom, #EDE8DC, #EDE8DC, #C1CFA1, #A5B68D);
 }
 
-
-body {
-    background: -webkit-linear-gradient(to top, #EDE8DC, #C1CFA1, #A5B68D);
-    background: linear-gradient(to bottom, #EDE8DC, #C1CFA1, #A5B68D);
-}
-
 .example-card {
     background-color: #ecebd5;
     border-radius: 0.75rem;
@@ -23,6 +17,10 @@ body {
     /* Animación suave para el escalado al pasar el mouse */
 }
 
+.btn:hover {
+    transform: scale(1.05);
+    /* Efecto de escalar la tarjeta al hacer hover */
+}
 /* 
 #ecebd5
 #e2d9bc 
@@ -45,18 +43,34 @@ Verde claro: C1CFA1
     cursor: pointer;
 }
 
-.titulo{
-    background-color: rgb(248, 255, 233);
-    height: 10px;
-}
 
-h1 {
-    text-align: left;
-    padding-bottom: 10px;
-    font-family: serif;
-    font-size: 10rem;
-    color: black;
-    margin-bottom: 30px;
+
+
+@media (min-width:300px) and (max-width: 766px) {
+    h1 {
+        text-align: left;
+        align-items: end;
+        padding-bottom: 10px;
+        font-family: serif;
+        font-size: 6rem;
+        color: black;
+        margin-bottom: 30px;
+    }
+
+    .titulo{
+        background-color: rgb(248, 255, 233);
+        height: 2.5rem;
+        align-items: end;
+        text-align: end;
+    }
+
+    .ofertas{
+        margin-top: 2rem;
+    }
+
+    .tarjetitas{
+        margin-bottom: 3rem;
+    }
 }
 
 .contenido {
@@ -169,7 +183,17 @@ p {
 }
 
 /* Estilos para hacer las tarjetas responsivas */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+    h1 {
+        text-align: left;
+        align-items: start;
+        padding-bottom: 10px;
+        font-family: serif;
+        font-size: 10rem;
+        color: black;
+        margin-bottom: 30px;
+    } 
+
     .tarjetas {
         flex-direction: column;
         /* Cambiar a una columna cuando el tamaño de pantalla sea menor */
@@ -180,6 +204,22 @@ p {
     .card {
         width: calc(100% - 20px);
         /* Ancho completo menos el espacio entre tarjetas */
+    }
+
+    .titulo{
+        background-color: rgb(248, 255, 233);
+        height: 10px;
+        align-items: center;
+        text-align: center;
+        height: 3rem;
+    }
+    
+    .ofertas{
+        margin-top: 3rem;
+    }
+    
+    .tarjetitas{
+        margin-bottom: 5rem;
     }
 }
 

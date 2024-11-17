@@ -39,7 +39,7 @@ export class CardComponent {
     idProducto: '', // -> inicializamos con comillas simples porque es tipo STRING
     nombre: '',
     descripcion: '',
-    oferta: false,
+    oferta: '',
     categoria: '',
     precio: 0,
     imagen: '',
@@ -71,7 +71,7 @@ export class CardComponent {
   
   // Filtrar los productos que no pertenezcan a la categoría "ofertas"
   filtrarProductos() {
-    this.coleccionFiltrada = this.coleccionProductos.filter(producto => !producto.oferta);
+    this.coleccionFiltrada = this.coleccionProductos.filter(producto => producto.oferta === 'false');
   }
 }
 

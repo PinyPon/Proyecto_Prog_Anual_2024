@@ -3,26 +3,26 @@
     <h1 class="titulo">Ramos Grandes</h1>
    </div>
 
+   <div class="container">
     <div class="tarjetas">
       <div *ngFor="let i of coleccionProductos" class="contenido">
-        <mat-card class="example-card">
-          <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" class="card-img-top">
-          <mat-card-content>
-            <p class="card-title">
-              {{i.nombre}}
-              <br>
-              Precio: ${{i.precio}}
-            </p>
-            <br>
-            <div class="mb-3">
-              {{i.stock}}
-            </div>
-          </mat-card-content>
+        <div class="example-card">
+          <img [src]="i.imagen" [alt]="i.alt" class="card-img-top">
+          <div class="titulo">
+            <h3 class="card-title">{{ i.nombre }}</h3>
+          </div>
+          <div class="descripcion">
+            <p>{{ i.descripcion }}</p>
+          </div>
+          <div class="precio">
+            <p>Precio: {{ i.precio | currency }}</p>
+          </div>
           <mat-card-actions class="boton">
             <input type="button" placeholder="cantidad deseada" [(ngModel)]="stock">
             <button mat-button class="btn" (click)="agregarProducto(i)"><i class="bi bi-cart-fill"></i></button>
           </mat-card-actions>
-        </mat-card>
+        </div>
       </div>
     </div>
+  </div> 
 </body>

@@ -27,13 +27,7 @@ export class RgrandesComponent {
 
     })
   }
-  carrito(){
-    Swal.fire({
-      title: "Oops",
-      text: "Este boton no está listo todavía",
-      icon: "warning"
-    });
-  }
+ 
 
   agregarProducto(info : Producto){
     const stockDeseado = Math.trunc(this.stock);

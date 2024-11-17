@@ -18,7 +18,7 @@ export class CarritoService {
   nombre: '',
   precio: 0,
   descripcion: '',
-  oferta: false,
+  oferta: '',
   categoria: '',
   imagen: '',
   alt: '',

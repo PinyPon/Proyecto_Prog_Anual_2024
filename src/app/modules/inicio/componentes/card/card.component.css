@@ -95,13 +95,13 @@ p {
     /* Transición suave al hacer hover */
 }
 
-.card:hover {
+.btn:hover {
     transform: scale(1.05);
     /* Efecto de escalar la tarjeta al hacer hover */
 }
 
 .card-img-top {
-    height: 14rem;
+    height: 14.5rem;
     /* Altura fija para las imágenes */
     object-fit: cover;
     /* Ajustar la imagen dentro del contenedor sin deformarla */
@@ -112,12 +112,15 @@ p {
     /* Espaciado interno del cuerpo de la tarjeta */
 }
 
+
+
 .card-title {
     font-size: 1rem;
     /* Tamaño del título */
     margin-bottom: 0.5rem;
     /* Margen inferior del título */
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 
 .card-text {
@@ -141,6 +144,14 @@ button {
     color: crimson;
 }
 
+.boton{
+    margin-bottom: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+}
+
 .btn, .more{
     display: block;
     justify-content: center;
@@ -157,6 +168,9 @@ button {
     width: 100%;
     transition: background-color 0.3s ease;
     /* Transición suave del color de fondo */
+    overflow: hidden;
+    /* Ocultar contenido que sobresalga del borde */
+    transition: transform 0.3s ease;
 }
 
 /* Estilos para hacer las tarjetas responsivas */

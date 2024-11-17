@@ -1,24 +1,28 @@
 <body>
-   <div class="etiqueta">
+  <div class="etiqueta">
     <h1 class="titulo">Ramos de Casamiento</h1>
-   </div>
+  </div>
 
+  <div class="container">
     <div class="tarjetas">
-        <div *ngFor="let i of coleccionProductos" class="contenido">
-          <mat-card class="example-card">
-            <img mat-card-image src="{{i.imagen}}" alt="{{i.alt}}" class="card-img-top">
-            <mat-card-content>
-              <p class="card-title">
-                {{i.nombre}}
-                <br>
-                Precio: ${{i.precio}}
-              </p>
-            </mat-card-content>
-            <mat-card-actions class="boton">
-              <button mat-button class="btn" (click)="carrito()"><i class="bi bi-cart-fill"></i></button>
-            </mat-card-actions>
-          </mat-card>
+      <div *ngFor="let i of coleccionProductos" class="contenido">
+        <div class="example-card">
+          <img [src]="i.imagen" [alt]="i.alt" class="card-img-top">
+          <div class="titulo">
+            <h3 class="card-title">{{ i.nombre }}</h3>
+          </div>
+          <div class="descripcion">
+            <p>{{ i.descripcion }}</p>
+          </div>
+          <div class="precio">
+            <p>Precio: {{ i.precio | currency }}</p>
+          </div>
+          <mat-card-actions class="boton">
+            <!--<button mat-button class="btn" (click)="compra(i)">Ver mas</button>
+             <button mat-button class="btn">Añadir al carrito</button> -->
+          </mat-card-actions>
         </div>
       </div>
-  </body>
-  
+    </div>
+  </div>  
+</body>
