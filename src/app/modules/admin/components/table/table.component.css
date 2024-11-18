@@ -142,3 +142,25 @@ Verde claro: C1CFA1
 }
 
 
+.modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nomElim{
+    font-size: medium;
+}
+
+.modal-body, .imgElim{
+    display: block;
+}
+
+img{
+    height: 7rem;
+}
+
+.imagenEliminar{
+    height: 10rem;
+
+} 
