@@ -1,4 +1,79 @@
-.registro {
+body{
+    background: -webkit-linear-gradient(to top, #EDE8DC, #d2dfb4); 
+    background: linear-gradient(to bottom, #EDE8DC, #d2dfb4); 
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}
+
+/* 
+Paleta:
+
+"Crema": EDE8DC
+Rosa: E7CCCC
+BB9CC0
+Verde oscuro: A5B68D
+Verde claro: C1CFA1 
+*/
+
+.container{
+    display: flex;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+.boton{
+    width: 120px;
+    margin: auto;
+}
+
+.material-icon{
+    justify-content: center;
+
+}
+
+
+.lista {
+    display: flex;
+    justify-content: center;
+
+}
+
+.contenedor {
+    padding-bottom: 10%;
+}
+
+/*Estilos para el encabezado*/
+.container.encabezado {
+    display: block;
+    padding: 20px;
+    align-items: center;
+    background-color: #E0E5B6;
+    
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+   
+    width: 100%;
+  }
+  
+  .container.encabezado h1 {
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000; 
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
+.t, .r{
+    display: block;
+}
+
+
+
+/* body{
     background: -webkit-linear-gradient(to top, #EDE8DC, #d2dfb4); 
     background: linear-gradient(to bottom, #EDE8DC, #d2dfb4); 
     display: flex;
@@ -15,17 +90,15 @@ BB9CC0
 Verde oscuro: A5B68D
 Verde claro: C1CFA1 
 */
-
+/* 
 .container{
-    width: 500px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
 .material-icon{
     justify-content: center;
-
 }
 
 h1{
@@ -44,41 +117,56 @@ h1{
 
 .contenedor {
     padding-bottom: 10%;
-}
+} */
 
 /* Ajustes para pantallas medianas y grandes */
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .container {
-        margin: auto;
-        /* Centrar el contenedor */
+        width: 100%;
     }
 
     .mat-form-field {
         width: 100%;
-        /* Asegurar que los campos de formulario ocupen todo el ancho */
     }
 
     .btn-primary {
         width: 100%;
-        /* Botón de registro ocupa todo el ancho disponible */
+      
         max-width: 200px;
-        /* Ancho máximo del botón */
         margin-top: 10px;
-        /* Espacio superior */
     }
-}
+} */
 
 /* Ajustes para pantallas pequeñas */
-@media (min-width:300px) and (max-width: 767px) {
+/* @media (min-width:300px) and (max-width: 767px) {
     .mat-form-field {
         width: 100%;
-        /* Asegurar que los campos de formulario ocupen todo el ancho */
     }
 
     .btn-primary {
         width: 100%;
-        /* Botón de registro ocupa todo el ancho disponible */
         max-width: 200px;
-        /* Ancho máximo del botón */
     }
+} */
+
+/*Estilos para el encabezado*/
+/* .container.encabezado {
+    display: block;
+    padding: 20px;
+    align-items: center;
+    background-color: #E0E5B6;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+    width: 100%;
 }
+
+.container.encabezado h1 {
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000; 
+    text-align: center;
+    width: 100%;
+}
+
+.t, .r{
+    display: block;
+} */

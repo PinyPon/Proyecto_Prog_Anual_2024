@@ -50,7 +50,7 @@ Verde claro: C1CFA1
 /*Estilos para el encabezado*/
 .container.encabezado {
     display: block;
-    
+    padding: 20px;
     align-items: center;
     background-color: #E0E5B6;
     
@@ -65,6 +65,7 @@ Verde claro: C1CFA1
     color: #000000; 
     text-align: center;
     margin: 0;
+    width: 100%;
   }
 .t, .r{
     display: block;

@@ -187,3 +187,118 @@ h1{
     display: flex;
     justify-content: center;
 }
+
+
+/* ESTILOS PARA MODAL */
+.modal{
+    background-color: #E7CCCC;
+    filter: opacity(50%);
+}
+
+.modal-content{
+    filter: opacity(200%);
+}
+
+.modal-body {
+    display: flex;
+    justify-content: space-between; /* Separar la imagen y el contenido */
+    gap: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 1rem;
+    background-color: #E7CCCC;
+
+  }
+  
+  .modal-dialog.modal-horizontal {
+    max-width: 40%; /* Ajustamos el ancho del modal */
+  }
+  
+  .body-content {
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen y el contenido */
+    gap: 2rem; /* Espacio entre la imagen y los detalles */
+  }
+  
+  .img-modal {
+    max-width: 200px; /* Establece un tamaño fijo para la imagen */
+    max-height: 300px; /* Limita el alto de la imagen */
+    border-radius: 0.5rem;
+  }
+  
+  .info-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .mb-precio {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  .modal-footer {
+    display: flex; /* Utiliza Flexbox para organizar los elementos */
+    flex-direction: column; /* Los elementos se apilan en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 1rem; /* Deja un espacio de 1rem entre cada elemento */
+  }
+  
+  /* Estilo del div con la clase "cantidad" */
+  .cantidad {
+    margin-bottom: auto; /* Empuja este div hacia la parte superior del contenedor (deja espacio abajo) */
+    text-align: center; /* Centra el contenido dentro del div */
+  }
+  
+  /* Estilo del div con la clase "botonesfooter" */
+  .botonesfooter {
+    display: flex; /* Los botones se organizan en una fila */
+    gap: 1rem; /* Deja un espacio de 1rem entre los botones */
+  }
+
+
+
+/*ESTILOS PARA MODAL pantallas chicas*/
+@media (max-width: 700px) {
+  .modal-dialog.modal-horizontal {
+    max-width: 95%; /* El modal ocupa un poco más de espacio en pantallas pequeñas */
+  }
+
+  .modal-body {
+    flex-direction: column; /* Cambiar a columna para apilar los elementos */
+    gap: 1rem; /* Reducir el espacio entre los elementos */
+  }
+
+  .body-content {
+    flex-direction: column; /* Apilar la imagen y los detalles */
+    align-items: center; /* Centrar los elementos */
+    gap: 1rem;
+  }
+
+  .img-modal {
+    width: 100%; /* Hacer que la imagen ocupe todo el ancho disponible */
+  }
+
+  .info-content {
+    align-items: center; /* Centrar la información debajo de la imagen */
+  }
+
+  .mb-precio {
+    font-size: 1.5rem; /* Reducir el tamaño del precio */
+  }
+
+  .modal-footer {
+    flex-direction: column; /* Colocar los botones en columna */
+    align-items: center; /* Centrar los botones */
+    gap: 1rem;
+  }
+
+  .cantidad {
+    margin-bottom: 0; /* Quitar el margen inferior */
+  }
+
+  .botonesfooter {
+    flex-direction: column; /* Los botones en columna */
+    gap: 0.5rem; /* Reducir el espacio entre los botones */
+  }
+}

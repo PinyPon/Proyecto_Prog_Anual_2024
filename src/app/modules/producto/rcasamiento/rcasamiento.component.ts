@@ -12,37 +12,60 @@ import { CarritoService } from '../../carrito/services/carrito.service';
   styleUrls: ['./rcasamiento.component.css']
 })
 export class RcasamientoComponent {
+ 
   coleccionProductos: Producto[] = [];
-  stock : number = 0;
-  
+  coleccionCasamiento: Producto[] = [];
+  productoSeleccionado!: Producto;
+  modalVisible: boolean = false;
+  stock: number = 0;
 
-
-
-  constructor(public servicioCrud: CrudService,
+  constructor(
+    public servicioCrud: CrudService,
     public servicioCarrito: CarritoService
-
   ) { }
 
   ngOnInit(): void {
-    // subscribe -> método de notificación de cambios (observable)
     this.servicioCrud.obtenerProducto().subscribe(producto => {
-
-      // Filtro para que solo las card se cierta categoria se muestren en esta pagina
-      this.coleccionProductos = producto.filter(producto => producto.categoria === 'Ramo Casamiento');
-
-    })
+      this.coleccionProductos = producto;
+      this.mostrarProductoCasamiento();
+    });
+    this.servicioCarrito.iniciarCarrito();
   }
-  carrito(){
-    Swal.fire({
-      title: "Oops",
-      text: "Este boton no está listo todavía",
-      icon: "warning"
+
+  mostrarProductoCasamiento() {
+    this.coleccionProductos.forEach(producto => {
+      if (producto.categoria === 'casamiento') {
+        this.coleccionCasamiento.push(producto);
+      }
     });
   }
-  agregarProducto(info : Producto){
+
+  // Función para mostrar más información de los productos
+  mostrarVer(info: Producto) {
+    this.modalVisible = true;  // Hacer visible el modal
+    this.productoSeleccionado = info;  // Asignar el producto seleccionado
+  }
+
+  // Función para cerrar el modal
+  cerrarModal() {
+    this.modalVisible = false;  // Ocultar el modal
+  }
+
+  agregarProducto(info: Producto) {
     const stockDeseado = Math.trunc(this.stock);
-   
+    if (stockDeseado <= 0 || stockDeseado > info.stock) {
+      Swal.fire({
+        title: "Error al agregar el producto",
+        text: "Stock insuficiente",
+        icon: "error"
+      });
+    } else {
       this.servicioCarrito.crearPedido(info, stockDeseado);
-  
+      Swal.fire({
+        title: "¡Excelente!",
+        text: "Producto añadido al carrito.",
+        icon: "success"
+      });
+    }
   }
 }

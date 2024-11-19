@@ -12,7 +12,7 @@
         <div class="precio">
           <p>Precio: {{ i.precio | currency }}</p></div>
         <mat-card-actions class="boton">
-          <button mat-button class="btn" (click)="compra(i)">Ver mas</button>
+          <button mat-button class="btn" routerLink="/{{i.categoria}}">Ver mas</button>
            <!-- <button mat-button class="btn">Añadir al carrito</button>  -->
         </mat-card-actions>
     </div>

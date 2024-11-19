@@ -53,7 +53,7 @@ h1 {
 }
 
 .contenido {
-    width: 200px;
+    width: 350px;
     display: inline-block;
     padding: 15px;
     border-radius: 8px;
@@ -79,7 +79,7 @@ p {
     justify-content: center;
     /* Centrar las tarjetas horizontalmente */
     margin-bottom: 3%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: serif;
     margin-bottom: 0%;
 }
 
@@ -103,7 +103,7 @@ p {
 }
 
 .card-img-top {
-    height: 14rem;
+    height: 24rem;
     /* Altura fija para las imágenes */
     object-fit: cover;
     /* Ajustar la imagen dentro del contenedor sin deformarla */

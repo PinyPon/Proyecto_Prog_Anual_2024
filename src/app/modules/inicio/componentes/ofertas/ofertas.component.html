@@ -3,6 +3,7 @@
     <div *ngFor="let i of coleccionProductos" class="contenido">
       <div class="example-card">
         <img [src]="i.imagen" [alt]="i.alt" class="card-img-top">
+        <p>OFERTA</p>
         <div class="titulo">
           <h3 class="card-title">{{ i.nombre }}</h3>
         </div>
@@ -10,7 +11,11 @@
           <p>{{ i.descripcion }}</p>
         </div>
         <div class="precio">
-          <p>Precio: {{ i.precio | currency }}</p></div>
+          <p>ANTES: ${{ i.precio | currency }}</p>
+          </div>
+          <p>Ahora: ${{ i.precio*0.50 | currency }}
+
+          </p>
         <mat-card-actions class="boton">
           <button mat-button class="btn" (click)="agregarProducto(i)"><i class="bi bi-cart-fill"></i></button>
            <!--<button mat-button class="btn">Añadir al carrito</button> -->

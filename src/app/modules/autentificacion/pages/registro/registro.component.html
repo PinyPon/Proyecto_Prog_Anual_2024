@@ -1,45 +1,60 @@
-<div class="registro">
-    <div class="container">
-        <div class="row">
-            <h1>Registrate</h1>
+<body>
 
-            <i class="material-icons" style="font-size: 200px;">person</i>
 
-            <!-- Nombre de usuario -->
-            <mat-form-field appearance="fill">
-                <mat-label>Ingrese un nombre de usuario:</mat-label>
-                <!-- ngModel = directiva BIDIRECCIONAL utilizada para formularios -->
-                <input [(ngModel)]="usuarios.nombre" matInput placeholder="Ej: Pepito" required>
-            </mat-form-field>
+  <div class="conteiner inicio">
+    <div class="row">
+      <div class="container encabezado">
+        <h1> Registro </h1>
+      </div>
 
-            <!-- Apellido de usuario -->
-            <mat-form-field appearance="fill">
-                <mat-label>Ingrese su apellido:</mat-label>
-                <input [(ngModel)]="usuarios.apellido" matInput placeholder="Ej: Peréz" required>
-            </mat-form-field>
+      <div class="container routeoRegistro">
+        <div class="t">
+          <h2>¿Ya tenes una cuenta?</h2>
 
-            <!-- Email de usuario -->
-            <mat-form-field appearance="fill">
-                <mat-label>Ingrese su email:</mat-label>
-                <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: pepitoperez2022@gmail.com" required>
-            </mat-form-field>
-
-            <!-- Contraseña de usuario -->
-            <mat-form-field>
-                <mat-label>Ingrese su contraseña:</mat-label>
-                <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6"
-                    required>
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                    [attr.aria-pressed]="hide">
-                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                </button>
-                <mat-hint align="start">Mínimo:{{input.value.length}}/6</mat-hint>
-            </mat-form-field>
-
-            <div class="botonR">
-                <!-- Botón para ENVIAR la información a la Base de Datos-->
-                <button class="boton" mat-raised-button color="primary" (click)="registrar()">Registrar</button>
-            </div>
         </div>
+        <div class="r">
+          <button class="btn routRegistro" mat-button routerLink="/inicio-sesion">Inicia Sesión</button>
+
+        </div>
+      </div>
+      <i class="material-icons" style="font-size: 200px;">person</i>
+
+
+      <!-- Nombre de usuario -->
+      <mat-form-field appearance="fill">
+        <mat-label>Ingrese un nombre de usuario:</mat-label>
+        <!-- ngModel = directiva BIDIRECCIONAL utilizada para formularios -->
+        <input [(ngModel)]="usuarios.nombre" matInput placeholder="Ej: Pepito" required>
+      </mat-form-field>
+
+      <!-- Apellido de usuario -->
+      <mat-form-field appearance="fill">
+        <mat-label>Ingrese su apellido:</mat-label>
+        <input [(ngModel)]="usuarios.apellido" matInput placeholder="Ej: Peréz" required>
+      </mat-form-field>
+
+      <!-- Email de usuario -->
+      <mat-form-field appearance="fill">
+        <mat-label>Ingrese su email:</mat-label>
+        <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: pepitoperez2022@gmail.com" required>
+      </mat-form-field>
+
+      <!-- Contraseña de usuario -->
+      <mat-form-field>
+        <mat-label>Ingrese su contraseña:</mat-label>
+        <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6"
+          required>
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-hint align="start">Mínimo:{{input.value.length}}/6</mat-hint>
+      </mat-form-field>
+
+      <div class="botonR">
+        <!-- Botón para ENVIAR la información a la Base de Datos-->
+        <button class="boton" mat-raised-button color="primary" (click)="registrar()">Registrar</button>
+      </div>
     </div>
-</div>
+  </div>
+</body>

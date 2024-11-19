@@ -82,13 +82,13 @@
                         <div class="mb-3">
                             <label class="form-label">Ingrese el nombre del producto:</label>
                             <input class="form-control" type="text" formControlName="nombre"
-                                placeholder="Ej.: Medias de chanchitos">
+                                placeholder="Ej.: Rosas">
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">Ingrese una descripción:</label>
                             <input class="form-control" type="text" formControlName="descripcion"
-                                placeholder="Ej.: Medias de chanchitos de algodón premium">
+                                placeholder="Ej.: Ramo de rosas">
                         </div>
 
                         <div class="mb-3">
@@ -179,7 +179,7 @@
                         </div>
 
                         <div class="mb-3">
-                            <label class="form-label">Ingrese el precio:</label>
+                            <label class="form-label">Ingrese el precio:$ </label>
                             <input class="form-control" type="number" formControlName="precio"
                                 placeholder="{{productoEdit.precio}}">
                         </div>
@@ -197,9 +197,9 @@
                             <label class="form-label">Selecciona una categoría:</label>
                             <select class="form-control" formControlName="categoria" class="form-select">
                                 <option selected disabled>Elija una opción</option>
-                                <option value="Ramo Grande">Ramo Grande</option>
-                                <option value="Ramo Mediano">Ramo Mediano</option>
-                                <option value="Ramo Casamiento">Ramo de Casamiento</option>
+                                <option value="grandes">Ramo Grande</option>
+                                <option value="medianos">Ramo Mediano</option>
+                                <option value="casamiento">Ramo de Casamiento</option>
                                 <option value="unidad">Unidad</option>
                             </select>
                         </div>
@@ -237,7 +237,7 @@
         </div>
 
         <!-- MODAL PARA ELIMINAR UN PRODUCTO -->
-        <div class="modal fade eliminar" *ngIf="modalVisibleProducto" id="eliminarProducto" tabindex="-1"
+        <div class="modal fade eliminar"  id="eliminarProducto" tabindex="-1"
             aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -248,7 +248,7 @@
                     </div>
 
                     <!-- CUERPO DE MODAL -->
-                    <div class="modal-body">
+                    <div class="modal-body" *ngIf="modalVisibleProducto">
                         <div class="nomElim">
                             {{productoSeleccionado.nombre}}
                         </div>

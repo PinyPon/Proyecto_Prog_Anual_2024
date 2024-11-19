@@ -15,6 +15,8 @@ import { CarrouselComponent } from './componentes/carrousel/carrousel.component'
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import { OfertasComponent } from './componentes/ofertas/ofertas.component';
+import { FormsModule, ReactiveFormsModule,  } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { OfertasComponent } from './componentes/ofertas/ofertas.component';
     CommonModule,
     InicioRoutingModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     MatButtonModule,

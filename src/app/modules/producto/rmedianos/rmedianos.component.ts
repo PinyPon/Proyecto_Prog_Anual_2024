@@ -12,35 +12,61 @@ import { CarritoService } from '../../carrito/services/carrito.service';
   styleUrls: ['./rmedianos.component.css']
 })
 export class RmedianosComponent {
-  // Creamos colección local de productos -> la definimos como array
+  
   coleccionProductos: Producto[] = [];
+  coleccionMediana: Producto[] = [];
+  productoSeleccionado!: Producto;
+  modalVisible: boolean = false;
+  stock: number = 0;
 
-  stock : number = 0;
-
-  constructor(public servicioCrud: CrudService,
+  constructor(
+    public servicioCrud: CrudService,
     public servicioCarrito: CarritoService
-
   ) { }
 
   ngOnInit(): void {
-    // subscribe -> método de notificación de cambios (observable)
     this.servicioCrud.obtenerProducto().subscribe(producto => {
-      this.coleccionProductos = producto.filter(producto => producto.categoria === 'Ramo Mediano');
-
-    })
+      this.coleccionProductos = producto;
+      this.mostrarProductoMediana();
+    });
+    this.servicioCarrito.iniciarCarrito();
   }
-  carrito(){
-    Swal.fire({
-      title: "Oops",
-      text: "Este boton no está listo todavía",
-      icon: "warning"
+
+  mostrarProductoMediana() {
+    this.coleccionProductos.forEach(producto => {
+      if (producto.categoria === 'medianos') {
+        this.coleccionMediana.push(producto);
+      }
     });
   }
-  agregarProducto(info : Producto){
+
+  // Función para mostrar más información de los productos
+  mostrarVer(info: Producto) {
+    this.modalVisible = true;  // Hacer visible el modal
+    this.productoSeleccionado = info;  // Asignar el producto seleccionado
+  }
+
+  // Función para cerrar el modal
+  cerrarModal() {
+    this.modalVisible = false;  // Ocultar el modal
+  }
+
+  agregarProducto(info: Producto) {
     const stockDeseado = Math.trunc(this.stock);
-   
+    if (stockDeseado <= 0 || stockDeseado > info.stock) {
+      Swal.fire({
+        title: "Error al agregar el producto",
+        text: "Stock insuficiente",
+        icon: "error"
+      });
+    } else {
       this.servicioCarrito.crearPedido(info, stockDeseado);
-  
+      Swal.fire({
+        title: "¡Excelente!",
+        text: "Producto añadido al carrito.",
+        icon: "success"
+      });
+    }
   }
 }
 
