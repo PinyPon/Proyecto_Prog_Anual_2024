@@ -9,7 +9,7 @@
   </mat-menu>
   <span></span>
   <!--boton inicio-->
-  <button id="menuInicio" mat-button routerLink="/inicio"><img src="../../../../../assets/flora (1).png" alt=""
+  <button id="menuInicio" mat-button routerLink="/admin"><img src="../../../../../assets/flora (1).png" alt=""
       width="34rem"></button>
 
   <!--Productos-->
@@ -50,7 +50,7 @@
   <mat-menu class="selector" #usuario="matMenu">
     <button class="tipografia" mat-menu-item (click)="ingresar()" *ngIf="logueado"
       routerLink="/registro">Registrarse</button>
-    <button class="tipografia" mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/inicio-sesion">Iniciar
+    <button class="tipografia" mat-menu-item (click)="ingresar()" *ngIf="logueado" routerLink="/iniciosesion">Iniciar
       Sesión</button>
     <button class="tipografia" mat-menu-item (click)="cerrarSesion()" *ngIf="deslogueado">Cerrar Sesión</button>
   </mat-menu>

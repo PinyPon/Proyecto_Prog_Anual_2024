@@ -193,3 +193,18 @@ Verde claro: C1CFA1
 #774 */
 
 
+.rounded-start{
+    width: 25rem;
+    /* Altura fija para las imágenes */
+    object-fit: cover;
+    /* Ajustar la imagen dentro del contenedor sin deformarla */
+}
+
+.card-body{
+    width: 100%;
+}
+
+.tachado{
+    text-decoration: line-through;
+    color: #666;
+}

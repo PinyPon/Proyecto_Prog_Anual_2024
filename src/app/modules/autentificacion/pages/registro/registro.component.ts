@@ -38,6 +38,14 @@ export class RegistroComponent {
   // CREAMOS COLECCIÓN DE USUARIOS, TIPO 'USUARIO' PARA ARRAYS
   coleccionUsuarios: Usuario[] = [];
 
+// El constructor recibe tres servicios como parámetros:
+// - servicioAuth: Inyecta el servicio AuthService para manejar la autenticación de usuarios.
+// - servicioFirestore: Inyecta el servicio FirestoreService para interactuar con
+// la base de datos de Firebase Firestore.
+// - servicioRutas: Inyecta el servicio Router para gestionar la navegación entre
+// diferentes rutas en la aplicación.
+// Estos servicios se hacen accesibles en la clase a través de las variables públicas correspondientes.
+
   constructor(
     public servicioAuth: AuthService,
     public servicioFirestore: FirestoreService,

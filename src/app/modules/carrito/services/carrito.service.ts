@@ -1,11 +1,19 @@
 import { Injectable } from '@angular/core';
+
+//importación angular firestore
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+
+//import modelos
 import { Pedido } from 'src/app/models/pedido';
+import { Producto } from 'src/app/models/producto';
+
+//importamos paquetería de alertas personalizadas
+import Swal from 'sweetalert2';
+
 import { AuthService } from '../../autentificacion/services/auth.service';
+
 import { Router } from '@angular/router';
 import { map } from 'rxjs';
-import Swal from 'sweetalert2';
-import { Producto } from 'src/app/models/producto';
 
 @Injectable({
   providedIn: 'root'
@@ -27,9 +35,13 @@ export class CarritoService {
   cantidad: 0,
   total: 0
 }
+
+
 private pedidosColeccion: AngularFirestoreCollection<Pedido>
 
-private uid: string | null = null;
+private uid:string | null = null;
+  servicioFireStore: any;
+
   constructor(
     private servicioAuth: AuthService,
     private servicioFirestore: AngularFirestore,
@@ -58,90 +70,51 @@ private uid: string | null = null;
     return this.pedidosColeccion.snapshotChanges().pipe(map(action => 
       action.map(a => a.payload.doc.data())))
   }
+  //FUNCION PARA CREAR PEDIDOS
+  crearPedido(producto:Producto, stock:number){
+    try{
+      const idPedido = this.servicioFireStore.createId();
 
-  crearPedido(producto: Producto, stock: number){
-    try {
-      const idPedido = this.servicioFirestore.createId();
-
+      //actualizamos datos del pedido
       this.pedido.idPedido = idPedido;
       this.pedido.producto = producto;
       this.pedido.cantidad = stock;
-      this.pedido.total = producto.precio*stock;
+      this.pedido.total = producto.precio*stock; //cálculo de precio total
 
-      this.pedidosColeccion.doc(idPedido).set(this.pedido)
+      //agregamos nuevo pedido recién obtenido a la colección de pedidos
+      this.pedidosColeccion.doc(idPedido).set(this.pedido);
+
+    } catch (error) {
       Swal.fire({
-        title: "Oh, no",
-        text: 'Hubo un problema con su pedido',
-        width: 600,
-        padding: "3em",
-        color: "#716add",
-        background: "#fff url(/images/trees.png)",
-        backdrop: `
-          rgba(0,0,123,0.4)
-          url("/images/nyan-cat.gif")
-          left top
-          no-repeat
-        `
-      });
-    }
-    catch{
-      Swal.fire({
-        title: "Tenemos un problema con eso",
-        showClass: {
-          popup: `
-            animate__animated
-            animate__fadeInUp
-            animate__faster
-          `
-        },
-        hideClass: {
-          popup: `
-            animate__animated
-            animate__fadeOutDown
-            animate__faster
-          `
-        }
-      });
+        title:'¡Oh no!',
+        text:'Ha ocurrido un error al intentar subir el producto \n'+error,
+        icon:'error'
+      })
     }
   }
-
-  borrarPedido(pedido: Pedido){
-    try{
-      this.pedidosColeccion.doc(pedido.idPedido).delete();
-
-      Swal.fire({
-        title: `${pedido.producto.nombre} ha sido borrado`,
-        showClass: {
-          popup: `
-            animate__animated
-            animate__fadeInUp
-            animate__faster
-          `
-        },
-        hideClass: {
-          popup: `
-            animate__animated
-            animate__fadeOutDown
-            animate__faster
-          `
-        }
-      });
+    //FUNCION PARA BORRAR PEDIDO
+    borrarPedido(pedido: Pedido){
+      try {
+        this.pedidosColeccion.doc(pedido.idPedido).delete();
+  
+        Swal.fire({
+          title:'El producto ha sido borrado',
+          text:'Se ha borrado correctamente el producto.',
+          icon:'success',
+        })
+  
+      } catch (error) {
+        Swal.fire({
+          title:'¡Oh no!',
+          text:'Ha ocurrido un error al intentar borrar el producto. \n'+error,
+          icon:'error'
+        })
+      }
     }
-    catch (error){
-      Swal.fire({
-        title: "Oh, no",
-        text: 'Hubo un problema al borrar su pedido',
-        width: 600,
-        padding: "3em",
-        color: "#716add",
-        background: "#fff url(/images/trees.png)",
-        backdrop: `
-          rgba(0,0,123,0.4)
-          url("/images/nyan-cat.gif")
-          left top
-          no-repeat
-        `
-      });
-    }
-  }
+  
 }
+
+
+
+
+

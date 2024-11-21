@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="tarjetas">
     <div *ngFor="let i of coleccionProductos" class="contenido">
       <div class="example-card">
@@ -17,9 +17,102 @@
 
           </p>
         <mat-card-actions class="boton">
-          <button mat-button class="btn" (click)="agregarProducto(i)"><i class="bi bi-cart-fill"></i></button>
-           <!--<button mat-button class="btn">Añadir al carrito</button> -->
+          <button mat-button class="btn" (click)="agregarProducto(i)"><i class="bi bi-cart-fill"></i></button> -->
+<!-- <button mat-button class="btn">Añadir al carrito</button>
         </mat-card-actions>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+<div class="card mb-3">
+  <div class="row g-0" *ngFor="let i of coleccionProductos" >
+    <div class="col-md-4">
+      <img [src]="i.imagen" [alt]="i.alt" class="img-fluid rounded-start">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <div class="titulo">
+          <h3 class="card-title">{{ i.nombre }}</h3>
+        </div>
+        <div class="descripcion">
+          <p>{{ i.descripcion }}</p>
+        </div>
+        <div class="precio">
+          <p class="tachado">ANTES: ${{ i.precio | currency }}</p>
+        </div>
+        <p>Ahora: ${{ i.precio*0.50 | currency }}</p>
+
+        <mat-card-actions class="boton">
+            <button mat-button class="btn" (click)="agregarProducto(i)"><i class="bi bi-cart-fill"></i></button>
+            <!--<button mat-button class="btn">Añadir al carrito</button> -->
+        </mat-card-actions>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="card mb-3" style="max-width: 940px;">
+  <div class="row g-0"  *ngFor="let i of coleccionProductos" class="contenido">
+    <div class="col-md-4">
+      <img [src]="i.imagen" [alt]="i.alt" class="img-fluid rounded-start">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <div class="titulo">
+          <h3 class="card-title">{{ i.nombre }}</h3>
+        </div>
+        <div class="descripcion">
+          <p>{{ i.descripcion }}</p>
+        </div>
+        <div class="precio">
+          <p>ANTES: ${{ i.precio | currency }}</p>
+        </div>
+        <p>Ahora: ${{ i.precio*0.50 | currency }}</p>
+
+        <mat-card-actions class="boton">
+            <button mat-button class="btn" (click)="agregarProducto(i)"><i class="bi bi-cart-fill"></i></button>
+            <!--<button mat-button class="btn">Añadir al carrito</button> -->
+        </mat-card-actions>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container">
+  <div class="row g-0 tarjetas">
+    <div *ngFor="let i of coleccionProductos" class="contenido">
+      <div class="col-md-4" >
+        <img [src]="i.imagen" [alt]="i.alt" class="card-img-top">
+      </div>
+      <div class="col-md-8">
+        <div class="example-card">
+
+          <div class="titulo">
+            <h3 class="card-title">{{ i.nombre }}</h3>
+          </div>
+          <div class="descripcion">
+            <p>{{ i.descripcion }}</p>
+          </div>
+          <div class="precio">
+            <p>ANTES: ${{ i.precio | currency }}</p>
+          </div>
+          <p>Ahora: ${{ i.precio*0.50 | currency }}
+
+          </p>
+          <mat-card-actions class="boton">
+            <button mat-button class="btn" (click)="agregarProducto(i)"><i class="bi bi-cart-fill"></i></button>
+            <!--<button mat-button class="btn">Añadir al carrito</button> -->
+          </mat-card-actions>
+        </div>
+      </div>
     </div>
   </div>
 </div>

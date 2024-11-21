@@ -42,6 +42,16 @@ productos: Producto = {
    * Atributos alfanuméricos (string) se inicializan con comillas simples
    * Atributos numéricos (number) se inicializan con cero ('0')
    */
+
+// Crea un nuevo formulario reactivo (FormGroup) para manejar los datos de un producto.
+// Cada campo del formulario está representado por un FormControl con su valor inicial 
+// y las validaciones correspondientes:
+// - 'nombre', 'precio', 'descripcion', 'oferta', 'categoria', 'alt', y 'stock' son 
+// campos obligatorios con la validación 'Validators.required'.
+// - 'precio' y 'stock' tienen valores iniciales de 0.
+// - 'imagen' está comentado, pero si se habilita sería otro campo obligatorio.
+// Este formulario permitirá gestionar y validar la información del producto.
+
     producto = new FormGroup({
     nombre: new FormControl('', Validators.required),
     precio: new FormControl(0, Validators.required),

@@ -1,7 +1,8 @@
-//Configuracion de Firebase en nuestra aplicación web
+// Configuracion de Firebase en nuestra aplicación web
 export const environment = {
     production: false,
- //Sacamos la palabra "const" y el ";" final, cambiamos el "=" por ":"
+ // Sacamos la palabra "const" y el ";" final, cambiamos el "=" por ":"
+ // Aca la estamops configurando
 firebaseConfig: {
     apiKey: "AIzaSyCkL52HCGI5wi1gbsEF1fwzIyXsC3ip57g",
     authDomain: "proyprog-tpanual.firebaseapp.com",
